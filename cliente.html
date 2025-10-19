@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Área do Cliente | TrataTudo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.5);
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #00ffe7;
+      text-shadow: 0 0 10px #00ffe7;
+    }
+    .login-box {
+      max-width: 400px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffe7;
+    }
+    input {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      font-size: 1em;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #00ffe7;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .painel {
+      display: none;
+      max-width: 800px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.1);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffe7;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    th, td {
+      padding: 10px;
+      border-bottom: 1px solid #00ffe7;
+      text-align: left;
+    }
+    th {
+      color: #00ffe7;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Área do Cliente</h1>
+  </header>
+
+  <div class="login-box">
+    <h2>Entrar</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="senha" placeholder="Palavra-passe" />
+    <button onclick="login()">Entrar</button>
+  </div>
+
+  <div class="painel" id="painel">
+    <h2>Meus Pedidos</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Nº Pedido</th>
+          <th>Serviço</th>
+          <th>Estado</th>
+          <th>Data</th>
+        </tr>
+      </thead>
+      <tbody id="tabelaPedidos">
+        <!-- Dados simulados -->
+        <tr>
+          <td>TRATATUDO-0023</td>
+          <td>Consultoria Técnica</td>
+          <td>Em análise</td>
+          <td>2025-10-17</td>
+        </tr>
+        <tr>
+          <td>TRATATUDO-0021</td>
+          <td>Pedido Inteligente</td>
+          <td>Concluído</td>
+          <td>2025-10-10</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    function login() {
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      // Simulação de login simples
+      if (email === "cliente@exemplo.com" && senha === "1234") {
+        document.querySelector(".login-box").style.display = "none";
+        document.getElementById("painel").style.display = "block";
+      } else {
+        alert("Credenciais inválidas. Tente novamente.");
+      }
+    }
+  </script>
+
+</body>
+</html>

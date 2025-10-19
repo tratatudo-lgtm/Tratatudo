@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TrataTudo | Soluções Inteligentes</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Orbitron', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff;
+    }
+    header {
+      text-align: center;
+      padding: 40px 20px;
+      background: rgba(0,0,0,0.5);
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 10px;
+      filter: drop-shadow(0 0 10px #00ffe7);
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #00ffe7;
+    }
+    section {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    h2 {
+      color: #00ffe7;
+      text-shadow: 0 0 5px #00ffe7;
+    }
+    .servicos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+    .servico {
+      background: rgba(255,255,255,0.1);
+      padding: 20px;
+      border-radius: 10px;
+      flex: 1;
+      min-width: 280px;
+      box-shadow: 0 0 10px #00ffe7;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 10px #00ffe7;
+    }
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(0,0,0,0.6);
+      font-size: 0.9em;
+    }
+    .social-links a {
+      color: #00ffe7;
+      text-decoration: none;
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .social-links a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="assets/logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#apoio">Apoio</a>
+      <a href="#pedido">Pedido</a>
+      <a href="#contacto">Contacto</a>
+      <a href="cliente.html">Entrar</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Quem Somos</h2>
+    <p>Somos uma plataforma inteligente que resolve tudo — desde pedidos técnicos até interações automatizadas com inteligência artificial. A nossa IA responde no Messenger e Instagram, e cada pedido recebe um número único para acompanhamento.</p>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços Técnicos</h2>
+    <div class="servicos">
+      <div class="servico">
+        <h3>Consultoria Técnica</h3>
+        <p>Diagnóstico e resolução de problemas técnicos com rapidez e precisão. A nossa equipa analisa cada situação e propõe soluções práticas, seja em TI, eletrónica ou sistemas operacionais.</p>
+      </div>
+      <div class="servico">
+        <h3>Pedidos Inteligentes</h3>
+        <p>Formulário com IA que gera um número de pedido único, envia confirmação automática e permite acompanhamento em tempo real. Ideal para quem valoriza agilidade e transparência.</p>
+      </div>
+      <div class="servico">
+        <h3>Atendimento via Meta</h3>
+        <p>Respostas automáticas no Messenger e Instagram com IA integrada. O cliente recebe atualizações sobre o estado do pedido, sugestões de serviços e suporte personalizado sem sair das redes sociais.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="apoio">
+    <h2>Apoio Especializado</h2>
+    <div class="servicos">
+      <div class="servico">
+        <h3>Legalização de Imigrantes</h3>
+        <p>Ajudamos cidadãos estrangeiros a regularizar a sua situação em Portugal. Desde pedidos de residência, reagrupamento familiar até nacionalidade — tratamos de tudo com clareza e rapidez.</p>
+      </div>
+      <div class="servico">
+        <h3>Respostas a Processos Judiciais</h3>
+        <p>Recebeste uma notificação do tribunal e não sabes como responder? Nós simplificamos o processo. Preenche o pedido e a nossa equipa orienta-te passo a passo, sem burocracias.</p>
+      </div>
+      <div class="servico">
+        <h3>Apoio em Documentação Oficial</h3>
+        <p>Preenchimento de formulários, pedidos à Segurança Social, Finanças, IEFP ou AIMA — fazemos contigo ou por ti, com total confidencialidade.</p>
+      </div>
+      <div class="servico">
+        <h3>Traduções Certificadas</h3>
+        <p>Traduzimos documentos legais e pessoais com certificação válida para processos oficiais, imigração ou tribunais.</p>
+      </div>
+      <div class="servico">
+        <h3>Consultas com Advogados</h3>
+        <p>Ligamos-te a profissionais que explicam os teus direitos e ajudam-te a tomar decisões informadas. Tudo começa com um pedido simples na nossa plataforma.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="pedido">
+    <h2>Fazer Pedido</h2>
+    <iframe src="https://form.jotform.com/252906067884064" title="Formulário de Pedido"></iframe>
+  </section>
+
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>Email: <a href="mailto:tratatudo@protonmail.com" style="color:#00ffe7;">tratatudo@protonmail.com</a></p>
+    <div class="social-links">
+      <p>Segue-nos nas redes sociais:</p>
+      <a href="https://instagram.com/tratatudo.pt" target="_blank">Instagram</a> |
+      <a href="https://facebook.com/tratatudopt" target="_blank">Facebook</a>
+    </div>
+    <p>WhatsApp: +351 923 364 360</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 TrataTudo. Plataforma inteligente para resolver tudo.</p>
+  </footer>
+
+  <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
+
+</body>
+</html>
