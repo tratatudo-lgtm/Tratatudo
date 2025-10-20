@@ -3,37 +3,35 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrataTudo | Soluções Inteligentes</title>
+  <title>Trata Tudo | Soluções Inteligentes</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
+      background-color: #ffffff;
+      color: #000;
     }
     header {
       text-align: center;
       padding: 40px 20px;
-      background: rgba(0,0,0,0.5);
     }
     header img {
       max-width: 180px;
       margin-bottom: 10px;
-      filter: drop-shadow(0 0 10px #00ffe7);
     }
     nav {
       margin-top: 10px;
     }
     nav a {
-      color: #fff;
+      color: #000;
       margin: 0 10px;
       text-decoration: none;
       font-weight: bold;
       transition: color 0.3s;
     }
     nav a:hover {
-      color: #00ffe7;
+      color: #00cfc0;
     }
     section {
       padding: 60px 20px;
@@ -41,8 +39,7 @@
       margin: auto;
     }
     h2 {
-      color: #00ffe7;
-      text-shadow: 0 0 5px #00ffe7;
+      color: #00cfc0;
     }
     .servicos {
       display: flex;
@@ -50,18 +47,18 @@
       gap: 20px;
     }
     .servico {
-      background: rgba(255,255,255,0.1);
+      background: #f2f2f2;
       padding: 20px;
       border-radius: 10px;
       flex: 1;
       min-width: 280px;
-      box-shadow: 0 0 10px #00ffe7;
+      box-shadow: 0 0 10px #ccc;
     }
     .cta-button {
       display: inline-block;
       margin-top: 20px;
       padding: 12px 24px;
-      background-color: #00ffe7;
+      background-color: #00cfc0;
       color: #000;
       font-weight: bold;
       border-radius: 8px;
@@ -69,22 +66,21 @@
       transition: background 0.3s;
     }
     .cta-button:hover {
-      background-color: #00cfc0;
+      background-color: #00a9a0;
+    }
+    .social-icons img {
+      width: 48px;
+      height: 48px;
+      transition: transform 0.3s;
+    }
+    .social-icons img:hover {
+      transform: scale(1.2);
     }
     footer {
       text-align: center;
       padding: 30px;
-      background: rgba(0,0,0,0.6);
+      background: #f0f0f0;
       font-size: 0.9em;
-    }
-    .social-links a {
-      color: #00ffe7;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: bold;
-    }
-    .social-links a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
@@ -103,7 +99,7 @@
   </header>
 
   <section id="hero" style="text-align:center; padding:80px 20px;">
-    <h2 id="mensagem-dinamica" style="font-size:2em; color:#00ffe7; text-shadow:0 0 5px #00ffe7;">
+    <h2 id="mensagem-dinamica" style="font-size:2em; color:#00cfc0;">
       A nossa IA resolve tudo — fala connosco!
     </h2>
     <a href="#pedido" class="cta-button">Fazer Pedido Agora</a>
@@ -111,7 +107,7 @@
 
   <section id="sobre">
     <h2>Quem Somos</h2>
-    <p>Somos uma plataforma inteligente que resolve tudo — desde pedidos técnicos até interações automatizadas com inteligência artificial. A nossa IA responde no Messenger e Instagram, e cada pedido recebe um número único para acompanhamento.</p>
+    <p>Somos uma plataforma inteligente que resolve tudo — desde pedidos técnicos até interações automatizadas com inteligência artificial. A nossa IA responde no Messenger e Instagram, atribui número de pedido e acompanha o processo contigo.</p>
   </section>
 
   <section id="servicos">
@@ -160,19 +156,25 @@
 
   <section id="pedido">
     <h2>Fazer Pedido</h2>
-    <p>Todos os pedidos são tratados pela nossa inteligência artificial. Basta enviar uma mensagem no Messenger ou Instagram e a nossa IA responde de imediato, atribui um número de pedido e acompanha o processo contigo.</p>
+    <p>Todos os pedidos são tratados pela nossa inteligência artificial. Basta enviar uma mensagem no Messenger ou Instagram e a nossa IA responde de imediato, atribui um número de pedido e acompanha o processo contigo — sem formulários, sem complicações.</p>
     <a href="https://instagram.com/tratatudo.pt" class="cta-button" target="_blank">Falar com a IA</a>
   </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: <a href="mailto:geral@tratatudo.pt" style="color:#00ffe7;">geral@tratatudo.pt</a></p>
-    <div class="social-links">
-      <p>Segue-nos nas redes sociais:</p>
-      <a href="https://instagram.com/tratatudo.pt" target="_blank">Instagram</a> |
-      <a href="https://facebook.com/tratatudopt" target="_blank">Facebook</a>
+  <section id="contacto-final" style="text-align:center; padding:40px 20px;">
+    <h2>Contacta-nos Diretamente</h2>
+    <p>Escolhe uma das opções abaixo para iniciar o atendimento automático com a nossa IA.</p>
+    <div class="social-icons" style="margin-top:20px;">
+      <a href="https://wa.me/351923364360" target="_blank" style="margin:0 10px;">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
+      </a>
+      <a href="https://facebook.com/tratatudopt" target="_blank" style="margin:0 10px;">
+        <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" />
+      </a>
+      <a href="https://m.me/tratatudopt" target="_blank" style="margin:0 10px;">
+        <img src="https://img.icons8.com/color/48/000000/facebook-messenger.png" alt="Messenger" />
+      </a>
     </div>
-    <p>WhatsApp: +351 923 364 360</p>
+    <p style="margin-top:20px;">A nossa IA está disponível 24h para responder, atribuir número de pedido e acompanhar o processo contigo.</p>
   </section>
 
   <footer>
@@ -180,14 +182,10 @@
   </footer>
 
   <script>
-    const mensagens = [
+    const mensagens = [43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/RuanMiguelGit/RuanMiguel-Portifolio/tree/6695569029b7f3bc37e959ef8f2d24931495c852/index.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1")[
       "📄 Precisas de ajuda com documentação oficial? Nós tratamos disso.",
       "🛂 Regularização de imigrantes — rápida e sem burocracias.",
       "⚖️ Recebeste uma notificação judicial? A nossa equipa orienta-te.",
       "💬 Atendimento via Messenger e Instagram com IA integrada.",
       "📑 Traduções certificadas para processos legais e imigração.",
-      "🔧 Consultoria técnica em TI, eletrónica e sistemas operacionais.",
-      "📲 Faz o teu pedido online e acompanha tudo em tempo real."
-    ];
-    let index = 0;
-    const elemento = document.get[43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/RuanMiguelGit/RuanMiguel-Portifolio/tree/6695569029b7f3bc37e959ef8f2d24931495c852/index.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1")
+      "
