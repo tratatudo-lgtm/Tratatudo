@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Nacionalidade Portuguesa Â· TrataTudo</title>
+  <title>Nacionalidade Portuguesa · TrataTudo</title>
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -63,48 +63,44 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
       }
       nav li { border: none; }
       nav a { padding: 0.75rem 1.5rem; }
+      .cliente-btn {
+        background: white;
+        color: #0078d4;
+        border-radius: 6px;
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cliente-btn:hover {
+        background: #e6f0ff;
+      }
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
     }
     ul {
       padding-left: 1.5rem;
     }
-    .contact-option {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .contact-option img {
-      width: 32px;
-    }
-    .contact-option a {
-      text-decoration: none;
-      color: #0078d4;
-      font-weight: 600;
-    }
-    .consultoria {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .consultoria a {
+    .botao {
       display: inline-block;
-      background: #0078d4;
-      color: white;
+      margin-top: 1rem;
       padding: 0.75rem 1.5rem;
-      border-radius: 6px;
+      background-color: #0078d4;
+      color: white;
       text-decoration: none;
       font-weight: 600;
+      border-radius: 4px;
+    }
+    .agente-ia {
+      margin-top: 3rem;
+      text-align: center;
     }
     footer {
       background: #002b5c;
@@ -112,6 +108,11 @@
       text-align: center;
       padding: 1rem;
       margin-top: 2rem;
+    }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 0.5rem;
     }
   </style>
 </head>
@@ -123,60 +124,49 @@
     <p>Ajudamos-te a obter a nacionalidade portuguesa com apoio completo e digital.</p>
   </header>
 
-  <button class="menu-toggle" onclick="toggleMenu()">â˜° Menu</button>
+  <button class="menu-toggle" onclick="toggleMenu()"> Menu</button>
 
   <nav id="mainMenu">
     <ul>
-      <li><a href="index.html">InÃ­cio</a></li>
+      <li><a href="index.html">Início</a></li>
       <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
       <li><a href="nacionalidade-portuguesa.html" class="active">Nacionalidade</a></li>
       <li><a href="documentos-oficiais.html">Documentos Oficiais</a></li>
-      <li><a href="apoio-juridico.html">Apoio JurÃ­dico</a></li>
-      <li><a href="traducoes-certificadas.html">TraduÃ§Ãµes</a></li>
+      <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
+      <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="admin/admin.html">Administração</a></li>
+      <li><a href="cliente-login.html" class="cliente-btn">Área do Cliente</a></li>
     </ul>
   </nav>
 
   <section>
-    <h2>ðŸ›‚ Quem pode pedir nacionalidade?</h2>
+    <h2> Quem pode pedir nacionalidade?</h2>
     <ul>
       <li>Filhos de portugueses nascidos no estrangeiro</li>
       <li>Netos de portugueses</li>
-      <li>CÃ´njuges ou unidos de facto com portugueses</li>
-      <li>Residentes legais hÃ¡ mais de 5 anos</li>
+      <li>Cônjuges ou unidos de facto com portugueses</li>
+      <li>Residentes legais há mais de 5 anos</li>
       <li>Descendentes de judeus sefarditas portugueses</li>
     </ul>
 
-    <p>Tratamos do processo completo, desde a documentaÃ§Ã£o atÃ© Ã  submissÃ£o oficial.</p>
+    <p>Tratamos do processo completo, desde a documentação até à submissão oficial. A nossa equipa acompanha cada etapa com atenção e profissionalismo.</p>
+    <a href="contacto.html" class="botao">Falar com um agente</a>
 
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      <a href="https://wa.me/351923364360" target="_blank">WhatsApp</a>
-    </div>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Messenger" />
-      <a href="https://m.me/tratatudo.pt" target="_blank">Messenger</a>
-    </div>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
-      <a href="https://instagram.com/tratatudo.pt" target="_blank">Instagram</a>
-    </div>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
-      <a href="mailto:geral@tratatudo.pt">geral@tratatudo.pt</a>
-    </div>
-
-    <div class="consultoria">
-      <a href="javascript:void(window.open('https://form.jotform.com/252906067884064','blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
-        Pedido de consultoria - TrataTudo.pt
-      </a>
+    <div class="agente-ia">
+      <h2> Fala com o nosso Assistente Inteligente</h2>
+      <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
     </div>
   </section>
 
   <footer>
-    <p>Â© 2025 TrataTudo Â· Atendimento Digital Â· SoluÃ§Ãµes Humanas</p>
+    <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+    <p>
+      <a href="sobre.html">Sobre Nós</a> ·
+      <a href="termos.html">Termos de Utilização</a> ·
+      <a href="privacidade.html">Política de Privacidade</a> ·
+      <a href="cookies.html">Cookies</a>
+    </p>
   </footer>
 
   <script>
