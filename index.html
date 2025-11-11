@@ -72,18 +72,36 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-    #lucia-chat {
+    #lucia-button {
       position: fixed;
       bottom: 20px;
       right: 20px;
+      background-color: #0078d4;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
       z-index: 999;
+      cursor: pointer;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
-    #lucia-chat iframe {
-      width: 300px;
-      height: 400px;
+    #lucia-button img {
+      width: 30px;
+      height: 30px;
+    }
+    #lucia-chatbox {
+      position: fixed;
+      bottom: 90px;
+      right: 20px;
+      width: 320px;
+      height: 500px;
       border: none;
       border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 998;
     }
   </style>
 </head>
@@ -149,9 +167,19 @@
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
 
-  <div id="lucia-chat">
-    <iframe src="https://eu.jotform.com/agent/0199f9d7dba47272af117860b646f5aa492b" allowfullscreen></iframe>
+  <!-- Assistente IA Lúcia como bolha de mensagem -->
+  <div id="lucia-button" onclick="toggleLuciaChat()">
+    <img src="https://cdn-icons-png.flaticon.com/512/2950/2950736.png" alt="Chat" />
   </div>
+
+  <iframe id="lucia-chatbox" src="https://eu.jotform.com/agent/0199f9d7dba47272af117860b646f5aa492b" allowfullscreen></iframe>
+
+  <script>
+    function toggleLuciaChat() {
+      const chat = document.getElementById('lucia-chatbox');
+      chat.style.display = chat.style.display === 'none' ? 'block' : 'none';
+    }
+  </script>
 
 </body>
 </html>
