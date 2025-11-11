@@ -18,23 +18,48 @@
       padding: 2rem;
       text-align: center;
     }
-    nav {
+    .menu-toggle {
       background: #0078d4;
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 1rem;
+      color: white;
       padding: 1rem;
+      font-size: 1.5rem;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+    nav {
+      display: none;
+      background: #0078d4;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      border-top: 1px solid rgba(255,255,255,0.2);
     }
     nav a {
+      display: block;
       color: white;
       text-decoration: none;
+      padding: 1rem;
       font-weight: 600;
-      padding: 0.5rem 1rem;
     }
     nav a:hover {
       background: #005fa3;
-      border-radius: 4px;
+    }
+    @media (min-width: 768px) {
+      .menu-toggle { display: none; }
+      nav { display: block; }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav li { border: none; }
+      nav a { padding: 0.75rem 1.5rem; }
     }
     section {
       padding: 2rem;
@@ -94,10 +119,14 @@
     <p>Atendimento digital · Soluções humanas · Tratamos de tudo por ti</p>
   </header>
 
-  <nav>
-    <a href="index.html">Início</a>
-    <a href="cliente.html">Área do Cliente</a>
-    <a href="admin/admin.html">Administração</a>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav id="mainMenu">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="cliente-login.html">Área do Cliente</a></li>
+      <li><a href="admin/admin.html">Administração</a></li>
+    </ul>
   </nav>
 
   <section>
@@ -130,6 +159,13 @@
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mainMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
 
 </body>
 </html>
