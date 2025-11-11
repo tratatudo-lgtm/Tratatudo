@@ -13,74 +13,88 @@
       color: #333;
       padding: 2rem;
     }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    h2 {
-      color: #0078d4;
-    }
-    .actions {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      margin-bottom: 2rem;
-    }
-    .actions button {
-      background: #d32f2f;
-      color: white;
-      padding: 0.5rem 1rem;
-      border: none;
-      border-radius: 6px;
-      font-weight: 600;
-      cursor: pointer;
-    }
-    .panel {
-      max-width: 800px;
+    .login-box, .admin-panel {
+      max-width: 500px;
       margin: auto;
       background: white;
       padding: 2rem;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    .panel h3 {
-      margin-top: 0;
-      color: #444;
-    }
-    .placeholder {
+    h2 {
+      color: #0078d4;
       text-align: center;
-      color: #777;
+    }
+    input, button {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+    button {
+      background: #0078d4;
+      color: white;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+    }
+    .logout-btn {
+      background: #d32f2f;
       margin-top: 1rem;
+    }
+    .hidden {
+      display: none;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <h2>Administração · TrataTudo</h2>
-    <p>Bem-vindo ao painel de gestão da plataforma.</p>
-  </header>
-
-  <div class="actions">
-    <button onclick="logoutAdmin()">Sair</button>
+  <!-- Login Form -->
+  <div class="login-box" id="loginBox">
+    <h2>Login Administração</h2>
+    <input type="text" id="usuario" placeholder="Utilizador" required />
+    <input type="password" id="senha" placeholder="Palavra-passe" required />
+    <button onclick="loginAdmin()">Entrar</button>
   </div>
 
-  <div class="panel">
-    <h3>📋 Gestão de Clientes e Pedidos</h3>
-    <div class="placeholder">
-      <p>Funcionalidades em breve: ver clientes, editar pedidos, exportar dados...</p>
-    </div>
+  <!-- Painel de Administração -->
+  <div class="admin-panel hidden" id="adminPanel">
+    <h2>Painel de Administração</h2>
+    <p>Bem-vindo, administrador. Aqui podes gerir clientes, pedidos e configurações.</p>
+    <button class="logout-btn" onclick="logoutAdmin()">Sair</button>
   </div>
 
   <script>
-    // Proteção de acesso
-    if (localStorage.getItem("adminAutenticado") !== "true") {
-      window.location.href = "admin-login.html";
+    const loginBox = document.getElementById("loginBox");
+    const adminPanel = document.getElementById("adminPanel");
+
+    // Verifica se já está autenticado
+    if (localStorage.getItem("adminAutenticado") === "true") {
+      loginBox.classList.add("hidden");
+      adminPanel.classList.remove("hidden");
+    }
+
+    function loginAdmin() {
+      const usuario = document.getElementById("usuario").value;
+      const senha = document.getElementById("senha").value;
+
+      const adminUser = "admin";
+      const adminPass = "tratatudo123";
+
+      if (usuario === adminUser && senha === adminPass) {
+        localStorage.setItem("adminAutenticado", "true");
+        loginBox.classList.add("hidden");
+        adminPanel.classList.remove("hidden");
+      } else {
+        alert("Credenciais inválidas.");
+      }
     }
 
     function logoutAdmin() {
       localStorage.removeItem("adminAutenticado");
-      window.location.href = "admin-login.html";
+      location.reload();
     }
   </script>
 
