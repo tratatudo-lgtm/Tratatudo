@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pedido de Residência | TrataTudo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #002b5c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    input, select, textarea {
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #0078d4;
+      color: white;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .faq {
+      margin-top: 2rem;
+    }
+    .faq h3 {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pedido de Residência em Portugal</h1>
+    <p>Prepara o teu processo com apoio da nossa equipa e acompanhamento digital 24h.</p>
+  </header>
+
+  <section>
+    <form id="formulario">
+      <h2>Formulário de Pedido</h2>
+      <input type="text" name="nome" placeholder="Nome completo" required />
+      <input type="text" name="nacionalidade" placeholder="Nacionalidade" required />
+      <select name="tipo" required>
+        <option value="">Tipo de pedido</option>
+        <option value="primeira">Primeira residência</option>
+        <option value="renovacao">Renovação</option>
+        <option value="reagrupamento">Reagrupamento familiar</option>
+      </select>
+      <input type="text" name="nif" placeholder="NIF" required />
+      <input type="text" name="niss" placeholder="NISS" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="tel" name="whatsapp" placeholder="WhatsApp" required />
+      <textarea name="mensagem" placeholder="Informações adicionais (opcional)"></textarea>
+      <label><input type="checkbox" required /> Autorizo o tratamento dos meus dados para efeitos de apoio administrativo.</label>
+      <button type="submit">Submeter Pedido</button>
+    </form>
+
+    <div class="faq">
+      <h2>Perguntas Frequentes</h2>
+      <h3>Preciso de ter contrato de trabalho?</h3>
+      <p>Sim, é um dos documentos que pode ser exigido para pedidos de residência ou reagrupamento.</p>
+      <h3>Posso pedir residência sem passaporte?</h3>
+      <p>O passaporte é geralmente obrigatório, mas podemos ajudar a avaliar alternativas válidas.</p>
+      <h3>Quanto tempo demora o processo?</h3>
+      <p>Depende do tipo de pedido e da disponibilidade da AIMA. A nossa equipa acompanha em tempo real.</p>
+    </div>
+  </section>
+
+</body>
+</html>
