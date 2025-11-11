@@ -3,85 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Documentos Oficiais · TrataTudo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    header { background: #002b5c; color: white; padding: 2rem; text-align: center; }
-    nav { position: sticky; top: 0; background: #0078d4; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; margin: 0; padding: 0.5rem; }
-    nav li { margin: 0.5rem; }
-    nav a { color: white; text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 5px; }
-    nav a:hover { background: #005fa3; }
-    section { padding: 2rem; max-width: 1000px; margin: auto; }
-    ul { padding-left: 1.2rem; }
-    .cta { display: block; width: fit-content; margin: 2rem auto; background: #0078d4; color: white; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; }
-    footer { background: #002b5c; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
-    @media (max-width: 600px) {
-      nav ul { flex-direction: column; align-items: center; }
-      nav a { display: block; width: 100%; text-align: center; }
-    }
-  </style>
+  <title>Documentos Oficiais - TrataTudo</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
   <header>
-    <h1>Documentos Oficiais</h1>
-    <p>Tratamos por ti os principais registos e inscrições administrativas em Portugal.</p>
+    <img src="icon-192.png" alt="TrataTudo" width="48" />
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="documentos-oficiais.html" class="active">Documentos Oficiais</a></li>
+        <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
+        <!-- outros links -->
+      </ul>
+    </nav>
   </header>
 
-  <nav>
+  <main>
+    <h1>Documentos Oficiais</h1>
+    <p>Tratamos de certidões, registos, declarações e outros documentos legais com rapidez e segurança.</p>
     <ul>
-      <li><a href="index.html">Início</a></li>
-      <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
-      <li><a href="nacionalidade-portuguesa.html">Nacionalidade</a></li>
-      <li><a href="documentos-oficiais.html">Documentos Oficiais</a></li>
-      <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
-      <li><a href="traducoes-certificadas.html">Traduções</a></li>
-      <li><a href="registos-notariado.html">Registos & Notariado</a></li>
+      <li>Certidão de nascimento</li>
+      <li>Certidão de casamento</li>
+      <li>Declaração de residência</li>
+      <li>Registo criminal</li>
     </ul>
-  </nav>
-
-  <section>
-    <h2>📋 NIF (Número de Identificação Fiscal)</h2>
-    <ul>
-      <li>Passaporte ou documento de identificação válido</li>
-      <li>Comprovativo de morada (declaração de residência ou contrato de arrendamento)</li>
-      <li>Representante fiscal (se não residente na UE)</li>
-    </ul>
-
-    <h2>📋 NISS (Número de Identificação da Segurança Social)</h2>
-    <ul>
-      <li>Documento de identificação válido</li>
-      <li>Comprovativo de residência</li>
-      <li>Contrato de trabalho ou declaração de atividade</li>
-    </ul>
-
-    <h2>📋 Inscrição no IEFP</h2>
-    <ul>
-      <li>Documento de identificação válido</li>
-      <li>Comprovativo de morada</li>
-      <li>Declaração de disponibilidade para trabalhar</li>
-      <li>Registo na plataforma <a href="https://www.iefp.pt/inscricao-para-emprego" target="_blank">iefponline</a></li>
-    </ul>
-
-    <h2>📋 Registos Civis</h2>
-    <ul>
-      <li>Certidão de nascimento, casamento ou óbito (dependendo do pedido)</li>
-      <li>Documentos de identificação dos intervenientes</li>
-      <li>Formulários específicos do IRN</li>
-    </ul>
-
-    <p>Para ajuda no preenchimento ou submissão, fala com a nossa assistente IA no canto inferior direito.</p>
-
-    <a href="residencia-aima.html" class="cta">Iniciar Pedido com a Equipa TrataTudo</a>
-  </section>
+  </main>
 
   <footer>
-    <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+    <p>&copy; 2025 TrataTudo</p>
   </footer>
-
-  <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
-
 </body>
 </html>

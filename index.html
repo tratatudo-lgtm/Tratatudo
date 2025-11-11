@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrataTudo · Serviços Digitais</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -124,6 +126,8 @@
       <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
       <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="faq.html">FAQ</a></li>
     </ul>
   </nav>
 
@@ -157,25 +161,6 @@
     </div>
   </section>
 
-  <section>
-    <h2>📨 Contacta a Equipa TrataTudo</h2>
-    <p>Preenche o formulário abaixo para receber apoio personalizado:</p>
-
-    <iframe
-      id="JotFormIFrame-252906067884064"
-      title="Pedido de consultoria - TrataTudo.pt"
-      onload="window.parent.scrollTo(0,0)"
-      allowtransparency="true"
-      allow="geolocation; microphone; camera; fullscreen; payment"
-      src="https://form.jotform.com/252906067884064"
-      frameborder="0"
-      style="min-width:100%;max-width:100%;height:539px;border:none;"
-      scrolling="no"
-    ></iframe>
-    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252906067884064']", "https://form.jotform.com/")</script>
-  </section>
-
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
@@ -185,7 +170,15 @@
       const menu = document.getElementById("mainMenu");
       menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registado com sucesso!'))
+        .catch(error => console.log('Erro ao registar o Service Worker:', error));
+    }
   </script>
+
+  <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
 
 </body>
 </html>

@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contacto · TrataTudo</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -66,24 +68,6 @@
       max-width: 1000px;
       margin: auto;
     }
-    .cta-whatsapp {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      font-weight: 600;
-      text-decoration: none;
-      margin-top: 1rem;
-    }
-    .confirmation {
-      background: #e6f7e6;
-      border: 1px solid #25D366;
-      padding: 1rem;
-      margin-top: 1rem;
-      border-radius: 5px;
-      display: none;
-    }
     footer {
       background: #002b5c;
       color: white;
@@ -112,6 +96,7 @@
       <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
       <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="faq.html">FAQ</a></li>
     </ul>
   </nav>
 
@@ -122,7 +107,6 @@
     <iframe
       id="JotFormIFrame-252906067884064"
       title="Pedido de consultoria - TrataTudo.pt"
-      onload="showConfirmation()"
       allowtransparency="true"
       allow="geolocation; microphone; camera; fullscreen; payment"
       src="https://form.jotform.com/252906067884064"
@@ -130,22 +114,8 @@
       style="min-width:100%;max-width:100%;height:539px;border:none;"
       scrolling="no"
     ></iframe>
-
-    <div class="confirmation" id="confirmationBox">
-      ✅ Obrigado! O teu pedido foi enviado com sucesso. A nossa equipa vai responder em breve.
-    </div>
-
     <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
-    <script>
-      window.jotformEmbedHandler("iframe[id='JotFormIFrame-252906067884064']", "https://form.jotform.com/");
-      function showConfirmation() {
-        document.getElementById("confirmationBox").style.display = "block";
-      }
-    </script>
-
-    <h2>📱 Preferes falar por WhatsApp?</h2>
-    <p>Clica no botão abaixo para iniciar uma conversa direta com a equipa TrataTudo:</p>
-    <a href="https://wa.me/351910000000" class="cta-whatsapp" target="_blank">Falar no WhatsApp</a>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252906067884064']", "https://form.jotform.com/")</script>
   </section>
 
   <footer>
@@ -157,7 +127,15 @@
       const menu = document.getElementById("mainMenu");
       menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registado com sucesso!'))
+        .catch(error => console.log('Erro ao registar o Service Worker:', error));
+    }
   </script>
+
+  <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
 
 </body>
 </html>
