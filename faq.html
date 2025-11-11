@@ -63,56 +63,48 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
       }
       nav li { border: none; }
       nav a { padding: 0.75rem 1.5rem; }
+      .cliente-btn {
+        background: white;
+        color: #0078d4;
+        border-radius: 6px;
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cliente-btn:hover {
+        background: #e6f0ff;
+      }
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
-    }
-    h2 {
-      margin-top: 2rem;
-      color: #0078d4;
     }
     .faq-item {
       margin-bottom: 1.5rem;
     }
-    .faq-item strong {
-      display: block;
+    .faq-item h3 {
       margin-bottom: 0.5rem;
-    }
-    .contact-option {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .contact-option img {
-      width: 32px;
-    }
-    .contact-option a {
-      text-decoration: none;
       color: #0078d4;
-      font-weight: 600;
     }
-    .consultoria {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .consultoria a {
+    .botao {
       display: inline-block;
-      background: #0078d4;
-      color: white;
+      margin-top: 1rem;
       padding: 0.75rem 1.5rem;
-      border-radius: 6px;
+      background-color: #0078d4;
+      color: white;
       text-decoration: none;
       font-weight: 600;
+      border-radius: 4px;
+    }
+    .agente-ia {
+      margin-top: 3rem;
+      text-align: center;
     }
     footer {
       background: #002b5c;
@@ -121,6 +113,11 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -128,7 +125,7 @@
   <header>
     <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>Perguntas Frequentes</h1>
-    <p>Esclarece as tuas dúvidas sobre os nossos serviços e processos.</p>
+    <p>Esclarecemos as dúvidas mais comuns sobre os nossos serviços e processos.</p>
   </header>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
@@ -142,101 +139,48 @@
       <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
       <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="faq.html" class="active">FAQ</a></li>
+      <li><a href="admin/admin.html">Administração</a></li>
+      <li><a href="cliente-login.html" class="cliente-btn">Área do Cliente</a></li>
     </ul>
   </nav>
 
   <section>
-    <h2>📝 Documentos Oficiais</h2>
     <div class="faq-item">
-      <strong>Quanto tempo demora a obtenção de uma certidão?</strong>
-      Normalmente entre 3 a 5 dias úteis, dependendo do tipo de certidão e da entidade emissora.
-    </div>
-    <div class="faq-item">
-      <strong>Posso pedir documentos para outra pessoa?</strong>
-      Sim, desde que tenhas uma autorização assinada e cópia do documento de identificação da pessoa.
+      <h3>Quanto tempo demora o processo de nacionalidade?</h3>
+      <p>O tempo varia conforme o tipo de pedido, mas em média pode demorar entre 6 a 12 meses. A nossa equipa acompanha todo o processo.</p>
     </div>
 
-    <h2>🛂 Nacionalidade Portuguesa</h2>
     <div class="faq-item">
-      <strong>Quais os documentos necessários para pedir nacionalidade?</strong>
-      Certidão de nascimento, comprovativo de residência, histórico criminal, entre outros — varia conforme o tipo de pedido.
-    </div>
-    <div class="faq-item">
-      <strong>O processo pode ser feito online?</strong>
-      Sim, tratamos tudo digitalmente e acompanhamos o processo junto das autoridades competentes.
+      <h3>Posso tratar tudo online?</h3>
+      <p>Sim! A maioria dos serviços pode ser iniciada e acompanhada digitalmente. Quando necessário, agendamos apoio presencial.</p>
     </div>
 
-    <h2>👨‍👩‍👧‍👦 Reagrupamento Familiar</h2>
     <div class="faq-item">
-      <strong>Preciso de contrato de trabalho para pedir reagrupamento?</strong>
-      Sim, é necessário comprovar meios de subsistência e alojamento adequado.
-    </div>
-    <div class="faq-item">
-      <strong>Posso reagrupar filhos maiores?</strong>
-      Sim, se estiverem a estudar em Portugal e forem dependentes economicamente.
+      <h3>As traduções são reconhecidas oficialmente?</h3>
+      <p>Sim, todas as traduções são feitas por tradutores certificados e podem ser reconhecidas por notário quando exigido.</p>
     </div>
 
-    <h2>⚖️ Apoio Jurídico</h2>
     <div class="faq-item">
-      <strong>Os serviços jurídicos são pagos?</strong>
-      Sim, mas oferecemos uma primeira análise gratuita e orçamentos transparentes.
-    </div>
-    <div class="faq-item">
-      <strong>Posso agendar uma consulta jurídica online?</strong>
-      Claro, temos atendimento por videoconferência com marcação prévia.
+      <h3>Como posso falar com um agente?</h3>
+      <p>Podes usar o botão abaixo ou contactar-nos por WhatsApp, Messenger, Instagram ou Email.</p>
     </div>
 
-    <h2>🌍 Traduções Certificadas</h2>
-    <div class="faq-item">
-      <strong>As traduções têm validade legal?</strong>
-      Sim, são feitas por tradutores certificados e reconhecidas por entidades oficiais.
-    </div>
-    <div class="faq-item">
-      <strong>Em que línguas fazem tradução?</strong>
-      Traduzimos para português, inglês, francês, espanhol, alemão e outras sob consulta.
-    </div>
+    <a href="contacto.html" class="botao">Falar com um agente</a>
 
-    <h2>📌 Registos & Notariado</h2>
-    <div class="faq-item">
-      <strong>Fazem reconhecimento de assinaturas?</strong>
-      Sim, com agendamento e envio digital ou presencial.
-    </div>
-    <div class="faq-item">
-      <strong>Posso autenticar documentos estrangeiros?</strong>
-      Sim, desde que estejam devidamente traduzidos e legalizados.
-    </div>
-
-    <h2>📞 Contactos e Consultoria</h2>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      <a href="https://wa.me/351923364360" target="_blank">WhatsApp</a>
-    </div>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Messenger" />
-      <a href="https://m.me/tratatudo.pt" target="_blank">Messenger</a>
-    </div>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
-      <a href="https://instagram.com/tratatudo.pt" target="_blank">Instagram</a>
-    </div>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.fl
-      <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
-      <a href="mailto:geral@tratatudo.pt">geral@tratatudo.pt</a>
-    </div>
-
-    <div class="consultoria">
-      <a href="javascript:void(window.open('https://form.jotform.com/252906067884064','blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
-        Pedido de consultoria - TrataTudo.pt
-      </a>
+    <div class="agente-ia">
+      <h2>💬 Fala com o nosso Assistente Inteligente</h2>
+      <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
     </div>
   </section>
 
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+    <p>
+      <a href="sobre.html">Sobre Nós</a> ·
+      <a href="termos.html">Termos de Utilização</a> ·
+      <a href="privacidade.html">Política de Privacidade</a> ·
+      <a href="cookies.html">Cookies</a>
+    </p>
   </footer>
 
   <script>
