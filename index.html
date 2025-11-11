@@ -22,33 +22,48 @@
       max-width: 180px;
       margin-bottom: 1rem;
     }
-    nav {
-      position: sticky;
-      top: 0;
+    .menu-toggle {
       background: #0078d4;
-      z-index: 1000;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      color: white;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+    nav {
+      display: none;
+      background: #0078d4;
     }
     nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
       list-style: none;
       margin: 0;
-      padding: 0.5rem;
+      padding: 0;
     }
     nav li {
-      margin: 0.5rem;
+      border-top: 1px solid rgba(255,255,255,0.2);
     }
     nav a {
+      display: block;
       color: white;
       text-decoration: none;
+      padding: 1rem;
       font-weight: 600;
-      padding: 0.5rem 1rem;
-      border-radius: 5px;
     }
     nav a:hover {
       background: #005fa3;
+    }
+    @media (min-width: 768px) {
+      .menu-toggle { display: none; }
+      nav { display: block; }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav li { border: none; }
+      nav a { padding: 0.75rem 1.5rem; }
     }
     section {
       padding: 2rem;
@@ -88,17 +103,6 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-    @media (max-width: 600px) {
-      nav ul {
-        flex-direction: column;
-        align-items: center;
-      }
-      nav a {
-        display: block;
-        width: 100%;
-        text-align: center;
-      }
-    }
   </style>
 </head>
 <body>
@@ -109,7 +113,9 @@
     <p>Escolhe o serviço que precisas e trata tudo com apoio digital.</p>
   </header>
 
-  <nav>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav id="mainMenu">
     <ul>
       <li><a href="index.html">Início</a></li>
       <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
@@ -151,12 +157,35 @@
     </div>
   </section>
 
+  <section>
+    <h2>📨 Contacta a Equipa TrataTudo</h2>
+    <p>Preenche o formulário abaixo para receber apoio personalizado:</p>
+
+    <iframe
+      id="JotFormIFrame-252906067884064"
+      title="Pedido de consultoria - TrataTudo.pt"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      allow="geolocation; microphone; camera; fullscreen; payment"
+      src="https://form.jotform.com/252906067884064"
+      frameborder="0"
+      style="min-width:100%;max-width:100%;height:539px;border:none;"
+      scrolling="no"
+    ></iframe>
+    <script src='https://cdn.jotfor.ms/s/umd/latest/for-form-embed-handler.js'></script>
+    <script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-252906067884064']", "https://form.jotform.com/")</script>
+  </section>
+
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
 
-  <!-- Assistente IA Lúcia como bolha de chat flutuante -->
-  <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mainMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+  </script>
 
 </body>
 </html>
