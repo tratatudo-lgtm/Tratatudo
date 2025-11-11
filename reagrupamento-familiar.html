@@ -4,22 +4,78 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Reagrupamento Familiar · TrataTudo</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Inter', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
     header { background: #002b5c; color: white; padding: 2rem; text-align: center; }
-    nav { position: sticky; top: 0; background: #0078d4; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; margin: 0; padding: 0.5rem; }
-    nav li { margin: 0.5rem; }
-    nav a { color: white; text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 5px; }
-    nav a:hover { background: #005fa3; }
-    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    .menu-toggle {
+      background: #0078d4;
+      color: white;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+    nav {
+      display: none;
+      background: #0078d4;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background: #005fa3;
+    }
+    @media (min-width: 768px) {
+      .menu-toggle { display: none; }
+      nav { display: block; }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav li { border: none; }
+      nav a { padding: 0.75rem 1.5rem; }
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
     ul { padding-left: 1.2rem; }
-    .cta { display: block; width: fit-content; margin: 2rem auto; background: #0078d4; color: white; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; }
-    footer { background: #002b5c; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
-    @media (max-width: 600px) {
-      nav ul { flex-direction: column; align-items: center; }
-      nav a { display: block; width: 100%; text-align: center; }
+    .cta {
+      display: block;
+      width: fit-content;
+      margin: 2rem auto;
+      background: #0078d4;
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      background: #002b5c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -27,10 +83,12 @@
 
   <header>
     <h1>Reagrupamento Familiar</h1>
-    <p>Reunifica legalmente a tua família em Portugal com apoio digital da TrataTudo.</p>
+    <p>Ajuda para reunir a tua família em Portugal com apoio legal e digital.</p>
   </header>
 
-  <nav>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav id="mainMenu">
     <ul>
       <li><a href="index.html">Início</a></li>
       <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
@@ -39,35 +97,50 @@
       <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
       <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="faq.html">FAQ</a></li>
     </ul>
   </nav>
 
   <section>
     <h2>📋 Documentos Necessários</h2>
     <ul>
-      <li>Comprovativo de vínculo familiar (certidão de nascimento, casamento, adoção)</li>
-      <li>Autorização de residência válida do requerente</li>
-      <li>Comprovativo de alojamento em Portugal</li>
+      <li>Comprovativo de vínculo familiar (certidão de nascimento ou casamento)</li>
+      <li>Comprovativo de residência legal do requerente em Portugal</li>
       <li>Comprovativo de meios de subsistência</li>
-      <li>Documentos de identificação dos familiares</li>
-      <li>Declaração de responsabilidade assinada pelo requerente</li>
-      <li>Registo criminal dos familiares emitido pelo país de origem</li>
-      <li>Autorização para consulta do registo criminal português (se aplicável)</li>
+      <li>Comprovativo de alojamento adequado</li>
+      <li>Documentos de identificação dos membros da família</li>
+      <li>Traduções certificadas dos documentos estrangeiros</li>
     </ul>
 
-    <h2>ℹ️ Observações Importantes</h2>
-    <p>O pedido pode ser feito online através do <a href="https://aima.gov.pt/pt/noticias/a-aima-informa-reagrupamento-familiar" target="_blank">Portal de Serviços da AIMA</a>.</p>
-    <p>O agendamento para recolha de dados biométricos é automático após submissão.</p>
-    <p>Para ajuda no preenchimento, fala com a nossa assistente IA no canto inferior direito.</p>
+    <h2>✅ Requisitos Legais</h2>
+    <ul>
+      <li>O pedido deve ser feito junto da AIMA ou através do portal online</li>
+      <li>O reagrupamento pode incluir cônjuge, filhos menores, ascendentes dependentes</li>
+      <li>Documentos devem estar legalizados e traduzidos</li>
+    </ul>
 
-    <a href="residencia-aima.html" class="cta">Iniciar Pedido com a Equipa TrataTudo</a>
+    <p>Para saber se tens direito ao reagrupamento familiar e como iniciar o processo, fala com a nossa assistente IA no canto inferior direito.</p>
+
+    <a href="contacto.html" class="cta">Falar com a Equipa TrataTudo</a>
   </section>
 
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
 
-  <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mainMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registado com sucesso!'))
+        .catch(error => console.log('Erro ao registar o Service Worker:', error));
+    }
+  </script>
 
 </body>
 </html>
