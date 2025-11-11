@@ -8,8 +8,22 @@
   <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    header { background: #002b5c; color: white; padding: 2rem; text-align: center; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #002b5c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
     .menu-toggle {
       background: #0078d4;
       color: white;
@@ -55,18 +69,40 @@
     }
     section {
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 800px;
       margin: auto;
     }
-    ul { padding-left: 1.2rem; }
-    .cta {
-      display: block;
-      width: fit-content;
-      margin: 2rem auto;
+    ul {
+      padding-left: 1.5rem;
+    }
+    .contact-option {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contact-option img {
+      width: 32px;
+    }
+    .contact-option a {
+      text-decoration: none;
+      color: #0078d4;
+      font-weight: 600;
+    }
+    .consultoria {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .consultoria a {
+      display: inline-block;
       background: #0078d4;
       color: white;
-      padding: 1rem 2rem;
-      border-radius: 5px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
       text-decoration: none;
       font-weight: 600;
     }
@@ -82,8 +118,9 @@
 <body>
 
   <header>
+    <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>Reagrupamento Familiar</h1>
-    <p>Ajuda para reunir a tua família em Portugal com apoio legal e digital.</p>
+    <p>Unimos famílias com apoio legal e digital em todo o processo de reagrupamento.</p>
   </header>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
@@ -91,7 +128,7 @@
   <nav id="mainMenu">
     <ul>
       <li><a href="index.html">Início</a></li>
-      <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
+      <li><a href="reagrupamento-familiar.html" class="active">Reagrupamento</a></li>
       <li><a href="nacionalidade-portuguesa.html">Nacionalidade</a></li>
       <li><a href="documentos-oficiais.html">Documentos Oficiais</a></li>
       <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
@@ -103,26 +140,38 @@
   </nav>
 
   <section>
-    <h2>📋 Documentos Necessários</h2>
+    <h2>👨‍👩‍👧‍👦 Quem pode pedir reagrupamento?</h2>
     <ul>
-      <li>Comprovativo de vínculo familiar (certidão de nascimento ou casamento)</li>
-      <li>Comprovativo de residência legal do requerente em Portugal</li>
-      <li>Comprovativo de meios de subsistência</li>
-      <li>Comprovativo de alojamento adequado</li>
-      <li>Documentos de identificação dos membros da família</li>
-      <li>Traduções certificadas dos documentos estrangeiros</li>
+      <li>Cônjuges e filhos menores de residentes legais</li>
+      <li>Ascendentes dependentes (pais ou avós)</li>
+      <li>Filhos maiores a estudar em Portugal</li>
+      <li>Unidos de facto com comprovação documental</li>
     </ul>
 
-    <h2>✅ Requisitos Legais</h2>
-    <ul>
-      <li>O pedido deve ser feito junto da AIMA ou através do portal online</li>
-      <li>O reagrupamento pode incluir cônjuge, filhos menores, ascendentes dependentes</li>
-      <li>Documentos devem estar legalizados e traduzidos</li>
-    </ul>
+    <p>Tratamos do processo completo, desde a documentação até à submissão junto ao SEF.</p>
 
-    <p>Para saber se tens direito ao reagrupamento familiar e como iniciar o processo, fala com a nossa assistente IA no canto inferior direito.</p>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+      <a href="https://wa.me/351923364360" target="_blank">WhatsApp</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Messenger" />
+      <a href="https://m.me/tratatudo.pt" target="_blank">Messenger</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      <a href="https://instagram.com/tratatudo.pt" target="_blank">Instagram</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+      <a href="mailto:geral@tratatudo.pt">geral@tratatudo.pt</a>
+    </div>
 
-    <a href="contacto.html" class="cta">Falar com a Equipa TrataTudo</a>
+    <div class="consultoria">
+      <a href="javascript:void(window.open('https://form.jotform.com/252906067884064','blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
+        Pedido de consultoria - TrataTudo.pt
+      </a>
+    </div>
   </section>
 
   <footer>

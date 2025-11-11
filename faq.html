@@ -8,8 +8,22 @@
   <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    header { background: #002b5c; color: white; padding: 2rem; text-align: center; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #002b5c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
     .menu-toggle {
       background: #0078d4;
       color: white;
@@ -55,29 +69,50 @@
     }
     section {
       padding: 2rem;
-      max-width: 1000px;
+      max-width: 800px;
       margin: auto;
     }
-    #searchBar {
-      width: 100%;
-      padding: 1rem;
-      font-size: 1rem;
-      margin-bottom: 2rem;
-      border: 1px solid #ccc;
-      border-radius: 5px;
+    h2 {
+      margin-top: 2rem;
+      color: #0078d4;
     }
-    .faq-item { margin-bottom: 1rem; border-bottom: 1px solid #ccc; }
-    .faq-question { font-weight: 600; cursor: pointer; padding: 1rem; background: #eee; border-radius: 5px; }
-    .faq-answer { display: none; padding: 1rem; }
-    .cta-whatsapp {
+    .faq-item {
+      margin-bottom: 1.5rem;
+    }
+    .faq-item strong {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .contact-option {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contact-option img {
+      width: 32px;
+    }
+    .contact-option a {
+      text-decoration: none;
+      color: #0078d4;
+      font-weight: 600;
+    }
+    .consultoria {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .consultoria a {
       display: inline-block;
-      background: #25D366;
+      background: #0078d4;
       color: white;
       padding: 0.75rem 1.5rem;
-      border-radius: 5px;
-      font-weight: 600;
+      border-radius: 6px;
       text-decoration: none;
-      margin-top: 2rem;
+      font-weight: 600;
     }
     footer {
       background: #002b5c;
@@ -91,8 +126,9 @@
 <body>
 
   <header>
+    <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>Perguntas Frequentes</h1>
-    <p>Encontra aqui respostas rápidas sobre os serviços da TrataTudo.</p>
+    <p>Esclarece as tuas dúvidas sobre os nossos serviços e processos.</p>
   </header>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
@@ -107,39 +143,96 @@
       <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
       <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="faq.html" class="active">FAQ</a></li>
     </ul>
   </nav>
 
   <section>
-    <input type="text" id="searchBar" placeholder="🔍 Procurar pergunta..." onkeyup="filterFAQ()" />
-
+    <h2>📝 Documentos Oficiais</h2>
     <div class="faq-item">
-      <div class="faq-question" onclick="toggleAnswer(this)">📝 Como posso pedir o NIF online?</div>
-      <div class="faq-answer">Podes pedir o NIF através de representante fiscal ou com apoio da nossa equipa. Basta preencher o formulário na página de Documentos Oficiais.</div>
+      <strong>Quanto tempo demora a obtenção de uma certidão?</strong>
+      Normalmente entre 3 a 5 dias úteis, dependendo do tipo de certidão e da entidade emissora.
+    </div>
+    <div class="faq-item">
+      <strong>Posso pedir documentos para outra pessoa?</strong>
+      Sim, desde que tenhas uma autorização assinada e cópia do documento de identificação da pessoa.
     </div>
 
+    <h2>🛂 Nacionalidade Portuguesa</h2>
     <div class="faq-item">
-      <div class="faq-question" onclick="toggleAnswer(this)">📄 Preciso de traduzir documentos para pedir nacionalidade?</div>
-      <div class="faq-answer">Sim, documentos emitidos fora de Portugal devem ser traduzidos por tradutor certificado e autenticados por notário ou advogado.</div>
+      <strong>Quais os documentos necessários para pedir nacionalidade?</strong>
+      Certidão de nascimento, comprovativo de residência, histórico criminal, entre outros — varia conforme o tipo de pedido.
+    </div>
+    <div class="faq-item">
+      <strong>O processo pode ser feito online?</strong>
+      Sim, tratamos tudo digitalmente e acompanhamos o processo junto das autoridades competentes.
     </div>
 
+    <h2>👨‍👩‍👧‍👦 Reagrupamento Familiar</h2>
     <div class="faq-item">
-      <div class="faq-question" onclick="toggleAnswer(this)">👨‍👩‍👧‍👦 O reagrupamento familiar pode ser feito online?</div>
-      <div class="faq-answer">Sim, o pedido pode ser feito no portal da AIMA. A nossa equipa pode ajudar-te a reunir os documentos e preencher o formulário.</div>
+      <strong>Preciso de contrato de trabalho para pedir reagrupamento?</strong>
+      Sim, é necessário comprovar meios de subsistência e alojamento adequado.
+    </div>
+    <div class="faq-item">
+      <strong>Posso reagrupar filhos maiores?</strong>
+      Sim, se estiverem a estudar em Portugal e forem dependentes economicamente.
     </div>
 
+    <h2>⚖️ Apoio Jurídico</h2>
     <div class="faq-item">
-      <div class="faq-question" onclick="toggleAnswer(this)">⚖️ O apoio jurídico é gratuito?</div>
-      <div class="faq-answer">Sim, se tiveres rendimentos baixos podes pedir apoio judiciário gratuito através da Segurança Social. Nós ajudamos no processo.</div>
+      <strong>Os serviços jurídicos são pagos?</strong>
+      Sim, mas oferecemos uma primeira análise gratuita e orçamentos transparentes.
+    </div>
+    <div class="faq-item">
+      <strong>Posso agendar uma consulta jurídica online?</strong>
+      Claro, temos atendimento por videoconferência com marcação prévia.
     </div>
 
+    <h2>🌍 Traduções Certificadas</h2>
     <div class="faq-item">
-      <div class="faq-question" onclick="toggleAnswer(this)">📱 Posso falar com a equipa pelo WhatsApp?</div>
-      <div class="faq-answer">Claro! Clica no botão abaixo para iniciar uma conversa direta com a nossa equipa.</div>
+      <strong>As traduções têm validade legal?</strong>
+      Sim, são feitas por tradutores certificados e reconhecidas por entidades oficiais.
+    </div>
+    <div class="faq-item">
+      <strong>Em que línguas fazem tradução?</strong>
+      Traduzimos para português, inglês, francês, espanhol, alemão e outras sob consulta.
     </div>
 
-    <a href="https://wa.me/351910000000" class="cta-whatsapp" target="_blank">Falar no WhatsApp</a>
+    <h2>📌 Registos & Notariado</h2>
+    <div class="faq-item">
+      <strong>Fazem reconhecimento de assinaturas?</strong>
+      Sim, com agendamento e envio digital ou presencial.
+    </div>
+    <div class="faq-item">
+      <strong>Posso autenticar documentos estrangeiros?</strong>
+      Sim, desde que estejam devidamente traduzidos e legalizados.
+    </div>
+
+    <h2>📞 Contactos e Consultoria</h2>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+      <a href="https://wa.me/351923364360" target="_blank">WhatsApp</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Messenger" />
+      <a href="https://m.me/tratatudo.pt" target="_blank">Messenger</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      <a href="https://instagram.com/tratatudo.pt" target="_blank">Instagram</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.fl
+      <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+      <a href="mailto:geral@tratatudo.pt">geral@tratatudo.pt</a>
+    </div>
+
+    <div class="consultoria">
+      <a href="javascript:void(window.open('https://form.jotform.com/252906067884064','blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
+        Pedido de consultoria - TrataTudo.pt
+      </a>
+    </div>
   </section>
 
   <footer>
@@ -152,28 +245,12 @@
       menu.style.display = menu.style.display === "block" ? "none" : "block";
     }
 
-    function toggleAnswer(el) {
-      const answer = el.nextElementSibling;
-      answer.style.display = answer.style.display === "block" ? "none" : "block";
-    }
-
-    function filterFAQ() {
-      const input = document.getElementById("searchBar").value.toLowerCase();
-      const items = document.querySelectorAll(".faq-item");
-      items.forEach(item => {
-        const question = item.querySelector(".faq-question").textContent.toLowerCase();
-        item.style.display = question.includes(input) ? "block" : "none";
-      });
-    }
-
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js')
         .then(() => console.log('Service Worker registado com sucesso!'))
         .catch(error => console.log('Erro ao registar o Service Worker:', error));
     }
   </script>
-
-  <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
 
 </body>
 </html>

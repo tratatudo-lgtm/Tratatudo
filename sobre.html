@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrataTudo · Atendimento Digital</title>
+  <title>Sobre Nós · TrataTudo</title>
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -71,40 +71,27 @@
       padding: 2rem;
       max-width: 900px;
       margin: auto;
+      line-height: 1.6;
     }
-    .intro {
-      text-align: center;
-      margin-bottom: 2rem;
+    h2 {
+      color: #0078d4;
+      margin-top: 2rem;
     }
-    .servicos {
+    .valores {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 1.5rem;
+      margin-top: 1.5rem;
     }
-    .servico {
+    .valor {
       background: white;
       padding: 1rem;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      text-align: center;
     }
-    .servico a {
-      text-decoration: none;
-      color: #0078d4;
-      font-weight: 600;
-    }
-    .consultoria {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .consultoria a {
-      display: inline-block;
-      background: #0078d4;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
+    .valor h3 {
+      margin-top: 0;
+      color: #005fa3;
     }
     footer {
       background: #002b5c;
@@ -119,15 +106,15 @@
 
   <header>
     <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
-    <h1>TrataTudo</h1>
-    <p>Atendimento digital · Soluções humanas · Tratamos de tudo por ti</p>
+    <h1>Sobre Nós</h1>
+    <p>Humanizamos o digital. Facilitamos a tua vida.</p>
   </header>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
 
   <nav id="mainMenu">
     <ul>
-      <li><a href="index.html" class="active">Início</a></li>
+      <li><a href="index.html">Início</a></li>
       <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
       <li><a href="nacionalidade-portuguesa.html">Nacionalidade</a></li>
       <li><a href="documentos-oficiais.html">Documentos Oficiais</a></li>
@@ -136,32 +123,38 @@
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
       <li><a href="contacto.html">Contacto</a></li>
       <li><a href="faq.html">FAQ</a></li>
-      <li><a href="sobre.html">Sobre Nós</a></li>
-      <li><a href="termos.html">Termos</a></li>
-      <li><a href="privacidade.html">Privacidade</a></li>
+      <li><a href="sobre.html" class="active">Sobre Nós</a></li>
     </ul>
   </nav>
 
   <section>
-    <div class="intro">
-      <h2>Bem-vindo à TrataTudo</h2>
-      <p>Somos a ponte entre ti e os serviços que precisas. Com atendimento digital e acompanhamento humano, tratamos de tudo por ti — com rigor, proximidade e agilidade.</p>
+    <h2>Quem somos</h2>
+    <p>A TrataTudo nasceu com uma missão simples: tornar os processos burocráticos mais humanos, acessíveis e rápidos. Somos uma equipa multidisciplinar — juristas, tradutores, técnicos administrativos e especialistas em mobilidade internacional — unidos por um propósito: ajudar pessoas e famílias a resolverem tudo com confiança e clareza.</p>
+
+    <p>Sabemos que lidar com documentos, legalizações e serviços públicos pode ser confuso e demorado. Por isso, criámos uma plataforma digital que aproxima o cidadão dos serviços que precisa, com atendimento personalizado e acompanhamento real.</p>
+
+    <h2>O que nos move</h2>
+    <div class="valores">
+      <div class="valor">
+        <h3>🤝 Proximidade</h3>
+        <p>Falamos contigo como se estivéssemos ao teu lado. Porque estamos — mesmo que à distância.</p>
+      </div>
+      <div class="valor">
+        <h3>⚖️ Rigor</h3>
+        <p>Trabalhamos com profissionais certificados e seguimos todos os requisitos legais em cada processo.</p>
+      </div>
+      <div class="valor">
+        <h3>🚀 Agilidade</h3>
+        <p>Respondemos rápido, tratamos com eficiência e poupamos-te tempo e dores de cabeça.</p>
+      </div>
+      <div class="valor">
+        <h3>💡 Inovação</h3>
+        <p>Usamos tecnologia para simplificar o que antes era complicado. E estamos sempre a melhorar.</p>
+      </div>
     </div>
 
-    <div class="servicos">
-      <div class="servico"><a href="reagrupamento-familiar.html">👨‍👩‍👧‍👦 Reagrupamento Familiar</a></div>
-      <div class="servico"><a href="nacionalidade-portuguesa.html">🛂 Nacionalidade Portuguesa</a></div>
-      <div class="servico"><a href="documentos-oficiais.html">📄 Documentos Oficiais</a></div>
-      <div class="servico"><a href="apoio-juridico.html">⚖️ Apoio Jurídico</a></div>
-      <div class="servico"><a href="traducoes-certificadas.html">🌍 Traduções Certificadas</a></div>
-      <div class="servico"><a href="registos-notariado.html">📌 Registos & Notariado</a></div>
-    </div>
-
-    <div class="consultoria">
-      <a href="javascript:void(window.open('https://form.jotform.com/252906067884064','blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
-        Pedido de consultoria - TrataTudo.pt
-      </a>
-    </div>
+    <h2>Estamos aqui para ti</h2>
+    <p>Seja para pedir nacionalidade, reagrupar a tua família, traduzir documentos ou obter apoio jurídico — estamos contigo em cada passo. E se não souberes por onde começar, fala connosco. A nossa equipa está pronta para ouvir, orientar e... tratar de tudo.</p>
   </section>
 
   <footer>

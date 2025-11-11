@@ -4,76 +4,192 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Traduções Certificadas · TrataTudo</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: 'Inter', sans-serif; margin: 0; background: #f9f9f9; color: #333; }
-    header { background: #002b5c; color: white; padding: 2rem; text-align: center; }
-    nav { position: sticky; top: 0; background: #0078d4; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
-    nav ul { display: flex; flex-wrap: wrap; justify-content: center; list-style: none; margin: 0; padding: 0.5rem; }
-    nav li { margin: 0.5rem; }
-    nav a { color: white; text-decoration: none; font-weight: 600; padding: 0.5rem 1rem; border-radius: 5px; }
-    nav a:hover { background: #005fa3; }
-    section { padding: 2rem; max-width: 1000px; margin: auto; }
-    ul { padding-left: 1.2rem; }
-    .cta { display: block; width: fit-content; margin: 2rem auto; background: #0078d4; color: white; padding: 1rem 2rem; border-radius: 5px; text-decoration: none; font-weight: 600; }
-    footer { background: #002b5c; color: white; text-align: center; padding: 1rem; margin-top: 2rem; }
-    @media (max-width: 600px) {
-      nav ul { flex-direction: column; align-items: center; }
-      nav a { display: block; width: 100%; text-align: center; }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #002b5c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
+    .menu-toggle {
+      background: #0078d4;
+      color: white;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+    nav {
+      display: none;
+      background: #0078d4;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background: #005fa3;
+    }
+    @media (min-width: 768px) {
+      .menu-toggle { display: none; }
+      nav { display: block; }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav li { border: none; }
+      nav a { padding: 0.75rem 1.5rem; }
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .contact-option {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contact-option img {
+      width: 32px;
+    }
+    .contact-option a {
+      text-decoration: none;
+      color: #0078d4;
+      font-weight: 600;
+    }
+    .consultoria {
+      text-align: center;
+      margin-top: 2rem;
+    }
+    .consultoria a {
+      display: inline-block;
+      background: #0078d4;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    footer {
+      background: #002b5c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>Traduções Certificadas</h1>
-    <p>Traduções com validade legal para processos administrativos, judiciais e notariais.</p>
+    <p>Serviço de tradução com certificação oficial para documentos legais e administrativos.</p>
   </header>
 
-  <nav>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav id="mainMenu">
     <ul>
       <li><a href="index.html">Início</a></li>
       <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
       <li><a href="nacionalidade-portuguesa.html">Nacionalidade</a></li>
       <li><a href="documentos-oficiais.html">Documentos Oficiais</a></li>
       <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
-      <li><a href="traducoes-certificadas.html">Traduções</a></li>
+      <li><a href="traducoes-certificadas.html" class="active">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="faq.html">FAQ</a></li>
     </ul>
   </nav>
 
   <section>
-    <h2>📋 Documentos que exigem tradução certificada</h2>
+    <h2>🌍 Tipos de Tradução Certificada</h2>
     <ul>
-      <li>Certidões de nascimento, casamento, óbito ou adoção</li>
-      <li>Diplomas e certificados escolares</li>
-      <li>Contratos, procurações e documentos legais</li>
-      <li>Documentos de imigração e vistos</li>
-      <li>Registos criminais e declarações oficiais</li>
-      <li>Documentos emitidos fora da UE sem apostila</li>
+      <li>Tradução de documentos oficiais (certidões, contratos, diplomas)</li>
+      <li>Tradução juramentada com reconhecimento legal</li>
+      <li>Tradução técnica e académica</li>
+      <li>Tradução para processos de imigração e nacionalidade</li>
     </ul>
 
-    <h2>✅ Requisitos legais</h2>
-    <ul>
-      <li>A tradução deve ser feita por tradutor certificado ou juramentado</li>
-      <li>Deve ser autenticada por notário ou advogado em Portugal</li>
-      <li>Documentos estrangeiros devem estar legalizados ou apostilados</li>
-      <li>Traduções feitas no estrangeiro só são aceites se forem certificadas e legalizadas</li>
-    </ul>
+    <p>Todos os documentos são traduzidos por profissionais certificados e entregues com validade legal.</p>
 
-    <h2>ℹ️ Observações úteis</h2>
-    <p>Documentos emitidos por Estados-Membros da UE podem dispensar tradução se acompanhados de formulário multilingue.</p>
-    <p>Traduções certificadas são exigidas em processos de nacionalidade, residência, registos civis e atos notariais.</p>
-    <p>Para saber se o teu documento precisa de tradução certificada, fala com a nossa assistente IA no canto inferior direito.</p>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+      <a href="https://wa.me/351923364360" target="_blank">WhatsApp</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Messenger" />
+      <a href="https://m.me/tratatudo.pt" target="_blank">Messenger</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      <a href="https://instagram.com/tratatudo.pt" target="_blank">Instagram</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+      <a href="mailto:geral@tratatudo.pt">geral@tratatudo.pt</a>
+    </div>
 
-    <a href="residencia-aima.html" class="cta">Solicitar Tradução com a Equipa TrataTudo</a>
+    <div class="consultoria">
+      <a href="javascript:void(window.open('https://form.jotform.com/252906067884064','blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
+        Pedido de consultoria - TrataTudo.pt
+      </a>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
 
-  <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mainMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registado com sucesso!'))
+        .catch(error => console.log('Erro ao registar o Service Worker:', error));
+    }
+  </script>
 
 </body>
 </html>
