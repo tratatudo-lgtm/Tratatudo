@@ -3,189 +3,120 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Trata Tudo | Soluções Inteligentes</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <title>TrataTudo — Atendimento Digital, Soluções Humanas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Inter', sans-serif;
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background-color: #ffffff;
-      color: #000;
+      background: #f9f9f9;
+      color: #333;
     }
     header {
+      background: #002b5c;
+      color: white;
+      padding: 2rem;
       text-align: center;
-      padding: 40px 20px;
     }
-    header img {
-      max-width: 180px;
-      margin-bottom: 10px;
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
     }
-    nav {
-      margin-top: 10px;
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
-    nav a {
-      color: #000;
-      margin: 0 10px;
+    .cta {
+      background: #0078d4;
+      color: white;
+      padding: 1rem 2rem;
+      display: inline-block;
+      margin-top: 1rem;
+      border-radius: 5px;
       text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s;
-    }
-    nav a:hover {
-      color: #00cfc0;
+      font-weight: 600;
     }
     section {
-      padding: 60px 20px;
+      padding: 2rem;
       max-width: 1000px;
       margin: auto;
     }
-    h2 {
-      color: #00cfc0;
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
     }
-    .servicos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
-    .servico {
-      background: #f2f2f2;
-      padding: 20px;
-      border-radius: 10px;
-      flex: 1;
-      min-width: 280px;
-      box-shadow: 0 0 10px #ccc;
-    }
-    .cta-button {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 24px;
-      background-color: #00cfc0;
-      color: #000;
-      font-weight: bold;
+    .card {
+      background: white;
+      padding: 1.5rem;
       border-radius: 8px;
-      text-decoration: none;
-      transition: background 0.3s;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    .cta-button:hover {
-      background-color: #00a9a0;
-    }
-    .social-icons img {
-      width: 48px;
-      height: 48px;
-      transition: transform 0.3s;
-    }
-    .social-icons img:hover {
-      transform: scale(1.2);
+    .card h3 {
+      margin-top: 0;
+      color: #0078d4;
     }
     footer {
+      background: #002b5c;
+      color: white;
       text-align: center;
-      padding: 30px;
-      background: #f0f0f0;
-      font-size: 0.9em;
+      padding: 1rem;
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <img src="logo-tratatudo.jpeg" alt="Logotipo Trata Tudo" />
-    <nav>
-      <a href="#sobre">Sobre</a>
-      <a href="#servicos">Serviços</a>
-      <a href="#apoio">Apoio</a>
-      <a href="#pedido">Pedido</a>
-      <a href="#contacto">Contacto</a>
-      <a href="cliente.html">Entrar</a>
-    </nav>
+    <h1>TrataTudo</h1>
+    <p>Atendimento digital 24h por IA. Soluções reais pela nossa equipa.</p>
+    <a href="https://form.jotform.com/yourformid" class="cta">Fazer Pedido Agora</a>
   </header>
 
-  <section id="hero" style="text-align:center; padding:80px 20px;">
-    <h2 id="mensagem-dinamica" style="font-size:2em; color:#00cfc0;">
-      A nossa IA resolve tudo — fala connosco!
-    </h2>
-    <a href="#pedido" class="cta-button">Fazer Pedido Agora</a>
-  </section>
-
-  <section id="sobre">
-    <h2>Quem Somos</h2>
-    <p>Somos uma plataforma inteligente que resolve tudo — desde pedidos técnicos até interações automatizadas com inteligência artificial. A nossa IA responde no Messenger e Instagram, atribui número de pedido e acompanha o processo contigo.</p>
-  </section>
-
-  <section id="servicos">
-    <h2>Serviços Técnicos</h2>
-    <div class="servicos">
-      <div class="servico">
-        <h3>Consultoria Técnica</h3>
-        <p>Diagnóstico e resolução de problemas técnicos com rapidez e precisão. A nossa equipa analisa cada situação e propõe soluções práticas, seja em TI, eletrónica ou sistemas operacionais.</p>
+  <section>
+    <h2>Serviços que tratamos por ti</h2>
+    <div class="services">
+      <div class="card">
+        <h3>📄 Documentos Oficiais</h3>
+        <p>Segurança Social, Finanças, IEFP e muito mais.</p>
       </div>
-      <div class="servico">
-        <h3>Pedidos Inteligentes</h3>
-        <p>Pedidos gerados por IA com número único, confirmação automática e acompanhamento em tempo real. Ideal para quem valoriza agilidade e transparência.</p>
+      <div class="card">
+        <h3>🛂 Residência & Imigração</h3>
+        <p>Processos junto da AIMA, reagrupamento familiar.</p>
       </div>
-      <div class="servico">
-        <h3>Atendimento via Meta</h3>
-        <p>Respostas automáticas no Messenger e Instagram com IA integrada. O cliente recebe atualizações sobre o estado do pedido, sugestões de serviços e suporte personalizado sem sair das redes sociais.</p>
+      <div class="card">
+        <h3>🇵🇹 Nacionalidade Portuguesa</h3>
+        <p>Pedido, acompanhamento e legalização.</p>
       </div>
-    </div>
-  </section>
-
-  <section id="apoio">
-    <h2>Apoio Especializado</h2>
-    <div class="servicos">
-      <div class="servico">
-        <h3>Legalização de Imigrantes</h3>
-        <p>Ajudamos cidadãos estrangeiros a regularizar a sua situação em Portugal. Desde pedidos de residência, reagrupamento familiar até nacionalidade — tratamos de tudo com clareza e rapidez.</p>
+      <div class="card">
+        <h3>🏛️ Registos Civis</h3>
+        <p>Casamento, nascimento, certidões e notariado.</p>
       </div>
-      <div class="servico">
-        <h3>Respostas a Processos Judiciais</h3>
-        <p>Recebeste uma notificação judicial e não sabes como agir? Nós simplificamos o processo. A nossa equipa orienta-te passo a passo, sem burocracias.</p>
+      <div class="card">
+        <h3>⚖️ Apoio Jurídico</h3>
+        <p>Consultas, respostas a processos e orientação legal.</p>
       </div>
-      <div class="servico">
-        <h3>Apoio em Documentação Oficial</h3>
-        <p>Ajudamos no preenchimento de formulários e pedidos junto à Segurança Social, Finanças, IEFP ou AIMA — com total confidencialidade e apoio personalizado.</p>
-      </div>
-      <div class="servico">
-        <h3>Traduções Certificadas</h3>
-        <p>Traduzimos documentos legais e pessoais com certificação válida para processos oficiais, imigração ou tribunais.</p>
-      </div>
-      <div class="servico">
-        <h3>Consultas com Advogados</h3>
-        <p>Conectamos-te a profissionais que esclarecem os teus direitos e orientam-te na tomada de decisões seguras. Tudo começa com uma conversa com a nossa IA.</p>
+      <div class="card">
+        <h3>🌍 Traduções Certificadas</h3>
+        <p>Válidas para processos legais e administrativos.</p>
       </div>
     </div>
   </section>
 
-  <section id="pedido">
-    <h2>Fazer Pedido</h2>
-    <p>Todos os pedidos são tratados pela nossa inteligência artificial. Basta enviar uma mensagem no Messenger ou Instagram e a nossa IA responde de imediato, atribui um número de pedido e acompanha o processo contigo — sem formulários, sem complicações.</p>
-    <a href="https://instagram.com/tratatudo.pt" class="cta-button" target="_blank">Falar com a IA</a>
+  <section>
+    <h2>Como funciona</h2>
+    <p>Fazes o pedido online → Recebes número único → Acompanhamento 24h por IA → Equipa entra em ação e resolve.</p>
   </section>
 
-  <section id="contacto-final" style="text-align:center; padding:40px 20px;">
-    <h2>Contacta-nos Diretamente</h2>
-    <p>Escolhe uma das opções abaixo para iniciar o atendimento automático com a nossa IA.</p>
-    <div class="social-icons" style="margin-top:20px;">
-      <a href="https://wa.me/351923364360" target="_blank" style="margin:0 10px;">
-        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp" />
-      </a>
-      <a href="https://facebook.com/tratatudopt" target="_blank" style="margin:0 10px;">
-        <img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook" />
-      </a>
-      <a href="https://m.me/tratatudopt" target="_blank" style="margin:0 10px;">
-        <img src="https://img.icons8.com/color/48/000000/facebook-messenger.png" alt="Messenger" />
-      </a>
-    </div>
-    <p style="margin-top:20px;">A nossa IA está disponível 24h para responder, atribuir número de pedido e acompanhar o processo contigo.</p>
+  <section>
+    <h2>Contacta-nos</h2>
+    <p>📲 WhatsApp: <strong>+351 923 364 360</strong></p>
+    <p>🌐 <a href="https://tratatudo.pt">tratatudo.pt</a></p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Trata Tudo. Plataforma inteligente para resolver tudo.</p>
+    <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
 
-  <script>
-    const mensagens = [43dcd9a7-70db-4a1f-b0ae-981daa162054](https://github.com/RuanMiguelGit/RuanMiguel-Portifolio/tree/6695569029b7f3bc37e959ef8f2d24931495c852/index.md?citationMarker=43dcd9a7-70db-4a1f-b0ae-981daa162054 "1")[
-      "📄 Precisas de ajuda com documentação oficial? Nós tratamos disso.",
-      "🛂 Regularização de imigrantes — rápida e sem burocracias.",
-      "⚖️ Recebeste uma notificação judicial? A nossa equipa orienta-te.",
-      "💬 Atendimento via Messenger e Instagram com IA integrada.",
-      "📑 Traduções certificadas para processos legais e imigração.",
-      "
+</body>
+</html>
