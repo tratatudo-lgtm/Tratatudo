@@ -22,20 +22,32 @@
       max-width: 180px;
       margin-bottom: 1rem;
     }
-    .cta {
-      background: #0078d4;
-      color: white;
-      padding: 1rem 2rem;
-      display: inline-block;
-      margin-top: 1rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-    }
     section {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #0078d4;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 1200px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
     .social-icons {
       margin-top: 1rem;
@@ -64,8 +76,49 @@
     <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>TrataTudo</h1>
     <p>Atendimento digital 24h por IA. Soluções reais pela nossa equipa.</p>
-    <a href="residencia-aima.html" class="cta">Pedido de Residência</a>
   </header>
+
+  <section>
+    <h2>💼 Serviços que tratamos por ti</h2>
+    <div class="services">
+      <div class="card">
+        <h3>🛂 Residência & Imigração</h3>
+        <p>Pedidos junto da AIMA, reagrupamento familiar, CPLP e vistos consulares.</p>
+      </div>
+      <div class="card">
+        <h3>🇵🇹 Nacionalidade Portuguesa</h3>
+        <p>Processos por casamento, ascendência, tempo de residência ou CPLP.</p>
+      </div>
+      <div class="card">
+        <h3>📄 Documentos Oficiais</h3>
+        <p>Segurança Social, Finanças, IEFP, registos civis e certidões.</p>
+      </div>
+      <div class="card">
+        <h3>⚖️ Apoio Jurídico</h3>
+        <p>Consultas, respostas a notificações, sentenças e orientação legal.</p>
+      </div>
+      <div class="card">
+        <h3>🌍 Traduções Certificadas</h3>
+        <p>Documentos traduzidos com validade legal para processos administrativos.</p>
+      </div>
+      <div class="card">
+        <h3>🏛️ Registos & Notariado</h3>
+        <p>Casamento, nascimento, divórcio, reconhecimento de documentos.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📋 Pedido de Consultoria</h2>
+    <p>Preenche o formulário abaixo para iniciar o teu processo com a nossa equipa.</p>
+    <iframe src="https://form.jotform.com/252906067884064" allowfullscreen></iframe>
+  </section>
+
+  <section>
+    <h2>🤖 Assistente Virtual · Lúcia</h2>
+    <p>Precisas de ajuda? Fala com a nossa assistente IA em tempo real.</p>
+    <iframe src="https://eu.jotform.com/agent/0199f9d7dba47272af117860b646f5aa492b" width="100%" height="600" style="border:none; border-radius:8px;"></iframe>
+  </section>
 
   <section>
     <h2>📞 Contacta-nos</h2>
