@@ -1,3 +1,4 @@
+/* Base */
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
@@ -5,10 +6,12 @@ body {
   color: #ffffff;
 }
 
+/* Cabeçalho */
 header {
   background-color: #001f3f;
   padding: 1rem;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
 }
@@ -25,6 +28,7 @@ header {
 nav ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
   padding: 0;
   margin: 0;
@@ -40,6 +44,7 @@ nav a.active {
   border-bottom: 2px solid #00d1ff;
 }
 
+/* Conteúdo principal */
 main {
   padding: 2rem;
 }
@@ -63,9 +68,41 @@ ul {
   border-radius: 4px;
 }
 
+/* Rodapé */
 footer {
   background-color: #001f3f;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem 1rem;
   font-size: 0.9rem;
+}
+
+.footer-logo img {
+  margin-bottom: 1rem;
+}
+
+.contact-links {
+  margin: 1rem 0;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  color: #00d1ff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-links {
+    flex-direction: column;
+    align-items: center;
+  }
 }
