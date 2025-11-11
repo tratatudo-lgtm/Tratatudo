@@ -2,149 +2,30 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Painel do Cliente · TrataTudo</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <title>Área do Cliente · TrataTudo</title>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #002b5c;
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-    section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    h2 {
-      color: #0078d4;
-      margin-top: 2rem;
-    }
-    .historico, .perfil {
-      margin-top: 1rem;
-    }
-    .pedido, .campo {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      margin-bottom: 1rem;
-    }
-    .pedido strong {
-      color: #005fa3;
-    }
-    .campo label {
-      display: block;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-    .campo input, .campo select {
-      width: 100%;
-      padding: 0.75rem;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-    }
-    .novo-pedido, .salvar {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .novo-pedido a, .salvar button {
-      background: #0078d4;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
-      border: none;
-      cursor: pointer;
-    }
-    #botaoIA {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0078d4;
-      color: white;
-      border: none;
-      border-radius: 50px;
-      padding: 0.75rem 1.25rem;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 9999;
-    }
+    body { font-family: Inter, sans-serif; background: #f9f9f9; padding: 2rem; }
+    h2 { color: #0078d4; }
+    button { background: #d32f2f; color: white; padding: 0.5rem 1rem; border: none; border-radius: 6px; font-weight: 600; cursor: pointer; }
   </style>
 </head>
 <body>
-
-  <header>
-    <h1>Olá, Júlio 👋</h1>
-    <p>Bem-vindo ao teu painel de cliente TrataTudo</p>
-  </header>
-
-  <section>
-    <h2>📁 Histórico de Pedidos</h2>
-    <div class="historico">
-      <div class="pedido">
-        <strong>Pedido #1023</strong><br />
-        Nacionalidade Portuguesa · Enviado a 02/11/2025 · Estado: Em análise
-      </div>
-      <div class="pedido">
-        <strong>Pedido #1018</strong><br />
-        Tradução Certificada · Concluído a 28/10/2025 · Estado: Finalizado
-      </div>
-      <div class="pedido">
-        <strong>Pedido #1009</strong><br />
-        Reagrupamento Familiar · Enviado a 20/10/2025 · Estado: A aguardar documentos
-      </div>
-    </div>
-
-    <div class="novo-pedido">
-      <a href="https://form.jotform.com/252906067884064" target="_blank">➕ Fazer novo pedido</a>
-    </div>
-
-    <h2>⚙️ Editar Perfil & Notificações</h2>
-    <form class="perfil">
-      <div class="campo">
-        <label for="nome">Nome</label>
-        <input type="text" id="nome" value="Júlio" />
-      </div>
-      <div class="campo">
-        <label for="email">Email</label>
-        <input type="email" id="email" value="julio@email.com" />
-      </div>
-      <div class="campo">
-        <label for="notificacoes">Notificações por email</label>
-        <select id="notificacoes">
-          <option value="sim" selected>Sim, quero receber atualizações</option>
-          <option value="nao">Não, prefiro não receber</option>
-        </select>
-      </div>
-      <div class="salvar">
-        <button type="submit">💾 Guardar alterações</button>
-      </div>
-    </form>
-  </section>
-
-  <!-- Botão flutuante para abrir o agente IA -->
-  <button id="botaoIA" onclick="abrirAgenteIA()">💬 Assistente IA</button>
+  <h2>Bem-vindo, <span id="nomeCliente"></span></h2>
+  <p>Estás autenticado na área de cliente.</p>
+  <button onclick="logout()">Sair</button>
 
   <script>
-    function abrirAgenteIA() {
-      window.open(
-        'https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js',
-        'chatIA',
-        'width=420,height=600,scrollbars=no,resizable=no'
-      );
+    if (localStorage.getItem("clienteAutenticado") !== "true") {
+      window.location.href = "cliente-login.html";
+    }
+
+    const nome = localStorage.getItem("clienteNome");
+    document.getElementById("nomeCliente").textContent = nome;
+
+    function logout() {
+      localStorage.clear();
+      window.location.href = "cliente-login.html";
     }
   </script>
-
 </body>
 </html>
