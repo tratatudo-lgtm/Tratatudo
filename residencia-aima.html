@@ -24,40 +24,22 @@
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
     }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      background: white;
-      padding: 2rem;
+    iframe {
+      border: none;
+      width: 100%;
+      height: 1200px;
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    input, select, textarea {
-      padding: 0.8rem;
-      font-size: 1rem;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-    }
-    button {
-      background: #0078d4;
+    footer {
+      background: #002b5c;
       color: white;
-      padding: 0.8rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .result {
-      margin-top: 2rem;
       text-align: center;
-      font-size: 1.1rem;
-      background: #eef3f8;
       padding: 1rem;
-      border-radius: 5px;
+      margin-top: 2rem;
     }
   </style>
 </head>
@@ -65,55 +47,20 @@
 
   <header>
     <h1>Pedido de Residência em Portugal</h1>
-    <p>Prepara o teu processo com apoio da nossa equipa e acompanhamento digital 24h.</p>
+    <p>Preenche o formulário abaixo para iniciar o teu processo com a nossa equipa.</p>
   </header>
 
   <section>
-    <form id="formulario">
-      <h2>Formulário de Pedido</h2>
-      <input type="text" name="nome" placeholder="Nome completo" required />
-      <input type="text" name="nacionalidade" placeholder="Nacionalidade" required />
-      <select name="tipo" required>
-        <option value="">Tipo de pedido</option>
-        <option value="primeira">Primeira residência</option>
-        <option value="renovacao">Renovação</option>
-        <option value="reagrupamento">Reagrupamento familiar</option>
-      </select>
-      <input type="text" name="nif" placeholder="NIF" required />
-      <input type="text" name="niss" placeholder="NISS" required />
-      <input type="email" name="email" placeholder="Email" required />
-      <input type="tel" name="whatsapp" placeholder="WhatsApp" required />
-      <textarea name="mensagem" placeholder="Informações adicionais (opcional)"></textarea>
-      <label><input type="checkbox" required /> Autorizo o tratamento dos meus dados para efeitos de apoio administrativo.</label>
-      <button type="submit">Submeter Pedido</button>
-    </form>
-
-    <div id="resultado" class="result" style="display:none;"></div>
-
-    <script>
-      document.getElementById("formulario").addEventListener("submit", function(e) {
-        e.preventDefault();
-
-        const agora = new Date();
-        const numero = "TT-" + agora.getFullYear() + "-" +
-                       String(agora.getMonth()+1).padStart(2, '0') + "-" +
-                       String(agora.getDate()).padStart(2, '0') + "-" +
-                       String(agora.getHours()).padStart(2, '0') + "-" +
-                       String(agora.getMinutes()).padStart(2, '0') + "-" +
-                       String(agora.getSeconds()).padStart(2, '0');
-
-        const resultado = document.getElementById("resultado");
-        resultado.style.display = "block";
-        resultado.innerHTML = `
-          ✅ Pedido submetido com sucesso!<br>
-          O teu número de acompanhamento é: <strong>${numero}</strong><br>
-          Guarda este número para acompanhar o estado do pedido na nossa homepage.
-        `;
-
-        document.getElementById("formulario").reset();
-      });
-    </script>
+    <iframe
+      src="https://form.jotform.com/252926707162056"
+      allowfullscreen>
+    </iframe>
   </section>
+
+  <footer>
+    <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+    <p><a href="mailto:geral@tratatudo.pt" style="color:white;">geral@tratatudo.pt</a> · <a href="https://wa.me/351923364360" style="color:white;">WhatsApp</a></p>
+  </footer>
 
 </body>
 </html>
