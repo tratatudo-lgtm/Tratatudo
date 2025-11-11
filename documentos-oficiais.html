@@ -3,73 +3,152 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Documentos Oficiais - TrataTudo</title>
+  <title>Documentos Oficiais · TrataTudo</title>
   <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="theme-color" content="#0078d4" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #002b5c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
+    .menu-toggle {
+      background: #0078d4;
+      color: white;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+    nav {
+      display: none;
+      background: #0078d4;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background: #005fa3;
+    }
+    @media (min-width: 768px) {
+      .menu-toggle { display: none; }
+      nav { display: block; }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav li { border: none; }
+      nav a { padding: 0.75rem 1.5rem; }
+    }
+    section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    .botao {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.75rem 1.5rem;
+      background-color: #0078d4;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 4px;
+    }
+    footer {
+      background: #002b5c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
 </head>
 <body>
+
   <header>
-    <div class="logo">
-      <img src="icon-192.png" alt="TrataTudo" width="48" />
-      <h1>TrataTudo</h1>
-    </div>
-    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
-    <nav>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="documentos-oficiais.html" class="active">Documentos Oficiais</a></li>
-        <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
-        <li><a href="traducoes-certificadas.html">Traduções Certificadas</a></li>
-        <li><a href="registos-notariado.html">Registos e Notariado</a></li>
-        <li><a href="nacionalidade-portuguesa.html">Nacionalidade Portuguesa</a></li>
-      </ul>
-    </nav>
+    <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
+    <h1>Documentos Oficiais</h1>
+    <p>Tratamos dos teus documentos com rapidez, segurança e total conformidade legal.</p>
   </header>
 
-  <main>
-    <section class="intro">
-      <h2>Documentos Oficiais</h2>
-      <p>Tratamos dos teus documentos com rapidez, segurança e total conformidade legal. A nossa equipa garante que tudo chega onde precisa — sem complicações.</p>
-    </section>
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
 
-    <section class="servicos">
-      <h3>Serviços disponíveis:</h3>
-      <ul>
-        <li>Certidão de nascimento</li>
-        <li>Certidão de casamento</li>
-        <li>Registo criminal</li>
-        <li>Declaração de residência</li>
-        <li>Reconhecimento de assinaturas</li>
-        <li>Autenticação de documentos</li>
-      </ul>
-    </section>
+  <nav id="mainMenu">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
+      <li><a href="nacionalidade-portuguesa.html">Nacionalidade</a></li>
+      <li><a href="documentos-oficiais.html" class="active">Documentos Oficiais</a></li>
+      <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
+      <li><a href="traducoes-certificadas.html">Traduções</a></li>
+      <li><a href="registos-notariado.html">Registos & Notariado</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
 
-    <section class="cta">
-      <p>Precisas de ajuda com algum documento específico? A nossa equipa está pronta para tratar de tudo por ti.</p>
-      <a href="contacto.html" class="botao">Falar com um agente</a>
-    </section>
-  </main>
+  <section>
+    <h2>📄 Serviços disponíveis</h2>
+    <ul>
+      <li>Certidão de nascimento</li>
+      <li>Certidão de casamento</li>
+      <li>Registo criminal</li>
+      <li>Declaração de residência</li>
+      <li>Reconhecimento de assinaturas</li>
+      <li>Autenticação de documentos</li>
+    </ul>
+
+    <p>Precisas de ajuda com algum documento específico? A nossa equipa está pronta para tratar de tudo por ti.</p>
+    <a href="contacto.html" class="botao">Falar com um agente</a>
+  </section>
 
   <footer>
-    <div class="footer-logo">
-      <img src="icon-192.png" alt="TrataTudo" width="48" />
-    </div>
-    <p>Queres falar com um dos nossos agentes?</p>
-    <div class="contact-links">
-      <a href="https://wa.me/351XXXXXXXXX" target="_blank">📱 WhatsApp</a>
-      <a href="https://m.me/tratatudo" target="_blank">💬 Messenger</a>
-      <a href="https://instagram.com/tratatudo" target="_blank">📸 Instagram</a>
-    </div>
-    <p>Se quiseres contratar consultoria, <a href="formulario.html">preenche o nosso formulário</a>.</p>
-    <p>&copy; 2025 TrataTudo. Todos os direitos reservados.</p>
+    <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
 
   <script>
     function toggleMenu() {
-      const nav = document.querySelector('nav ul');
-      nav.classList.toggle('open');
+      const menu = document.getElementById("mainMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registado com sucesso!'))
+        .catch(error => console.log('Erro ao registar o Service Worker:', error));
     }
   </script>
-  <script src="service-worker.js"></script>
+
 </body>
 </html>
