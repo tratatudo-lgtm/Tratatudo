@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrataTudo — Atendimento Digital, Soluções Humanas</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
@@ -18,9 +18,13 @@
       padding: 2rem;
       text-align: center;
     }
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
     header h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 2.2rem;
     }
     header p {
       font-size: 1.2rem;
@@ -63,14 +67,24 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    a {
+      color: #0078d4;
+      text-decoration: none;
+    }
+    .social-icons img {
+      width: 24px;
+      margin: 0 8px;
+      vertical-align: middle;
+    }
   </style>
 </head>
 <body>
 
   <header>
+    <img src="logo.png" alt="Logotipo TrataTudo" />
     <h1>TrataTudo</h1>
     <p>Atendimento digital 24h por IA. Soluções reais pela nossa equipa.</p>
-    <a href="https://form.jotform.com/yourformid" class="cta">Fazer Pedido Agora</a>
+    <a href="https://form.jotform.com/252906067884064" class="cta" target="_blank">Fazer Pedido Agora</a>
   </header>
 
   <section>
@@ -83,6 +97,7 @@
       <div class="card">
         <h3>🛂 Residência & Imigração</h3>
         <p>Processos junto da AIMA, reagrupamento familiar.</p>
+        <a href="residencia-aima.html" class="cta">Pedido de Residência</a>
       </div>
       <div class="card">
         <h3>🇵🇹 Nacionalidade Portuguesa</h3>
@@ -103,19 +118,52 @@
     </div>
   </section>
 
-  <section>
-    <h2>Como funciona</h2>
-    <p>Fazes o pedido online → Recebes número único → Acompanhamento 24h por IA → Equipa entra em ação e resolve.</p>
+  <section id="acompanhamento" style="background:#eef3f8; padding:2rem;">
+    <h2 style="text-align:center;">🔍 Acompanhamento de Pedido</h2>
+    <p style="text-align:center;">Insere o teu número de acompanhamento para saber o estado atual do teu pedido.</p>
+
+    <form style="max-width:500px; margin:auto; display:flex; flex-direction:column; gap:1rem;">
+      <label for="codigo">Número de Acompanhamento (ex: TT-2025-1204)</label>
+      <input type="text" id="codigo" name="codigo" placeholder="TT-2025-XXXX" required style="padding:0.8rem; font-size:1rem; border-radius:5px; border:1px solid #ccc;" />
+
+      <button type="submit" style="background:#0078d4; color:white; padding:0.8rem; font-size:1rem; border:none; border-radius:5px; cursor:pointer;">
+        Ver Estado do Pedido
+      </button>
+    </form>
+
+    <div id="resultado" style="margin-top:2rem; text-align:center; font-size:1.1rem;"></div>
+
+    <script>
+      document.querySelector("form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const codigo = document.getElementById("codigo").value.trim();
+        const resultado = document.getElementById("resultado");
+
+        if (codigo === "TT-2025-1204") {
+          resultado.innerHTML = "✅ Pedido recebido. Em análise pela equipa. Acompanhamento ativo por IA.";
+        } else {
+          resultado.innerHTML = "⚠️ Número não encontrado. Verifica se está correto ou aguarda confirmação por email.";
+        }
+      });
+    </script>
   </section>
 
-  <section>
-    <h2>Contacta-nos</h2>
-    <p>📲 WhatsApp: <strong>+351 923 364 360</strong></p>
-    <p>🌐 <a href="https://tratatudo.pt">tratatudo.pt</a></p>
+  <section id="contactos" style="background:#f0f4f8; padding:2rem;">
+    <h2 style="text-align:center;">📞 Contacta a TrataTudo</h2>
+    <p style="text-align:center;">Estamos disponíveis 24h por dia para te ajudar.</p>
+    <div style="text-align:center; font-size:1.1rem;">
+      <p>📧 Email: <a href="mailto:geral@tratatudo.pt">geral@tratatudo.pt</a></p>
+      <p>📲 WhatsApp: <a href="https://wa.me/351923364360" target="_blank">+351 923 364 360</a></p>
+      <div class="social-icons">
+        <a href="https://instagram.com/tratatudo.pt" target="_blank"><img src="instagram-icon.png" alt="Instagram" /></a>
+        <a href="https://facebook.com/tratatudo.pt" target="_blank"><img src="facebook-icon.png" alt="Facebook" /></a>
+      </div>
+    </div>
   </section>
 
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+    <p><a href="mailto:geral@tratatudo.pt" style="color:white;">geral@tratatudo.pt</a> · <a href="https://wa.me/351923364360" style="color:white;">WhatsApp</a></p>
   </footer>
 
 </body>

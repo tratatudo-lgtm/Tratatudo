@@ -51,11 +51,13 @@
       border-radius: 5px;
       cursor: pointer;
     }
-    .faq {
+    .result {
       margin-top: 2rem;
-    }
-    .faq h3 {
-      margin-bottom: 0.5rem;
+      text-align: center;
+      font-size: 1.1rem;
+      background: #eef3f8;
+      padding: 1rem;
+      border-radius: 5px;
     }
   </style>
 </head>
@@ -86,15 +88,31 @@
       <button type="submit">Submeter Pedido</button>
     </form>
 
-    <div class="faq">
-      <h2>Perguntas Frequentes</h2>
-      <h3>Preciso de ter contrato de trabalho?</h3>
-      <p>Sim, é um dos documentos que pode ser exigido para pedidos de residência ou reagrupamento.</p>
-      <h3>Posso pedir residência sem passaporte?</h3>
-      <p>O passaporte é geralmente obrigatório, mas podemos ajudar a avaliar alternativas válidas.</p>
-      <h3>Quanto tempo demora o processo?</h3>
-      <p>Depende do tipo de pedido e da disponibilidade da AIMA. A nossa equipa acompanha em tempo real.</p>
-    </div>
+    <div id="resultado" class="result" style="display:none;"></div>
+
+    <script>
+      document.getElementById("formulario").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const agora = new Date();
+        const numero = "TT-" + agora.getFullYear() + "-" +
+                       String(agora.getMonth()+1).padStart(2, '0') + "-" +
+                       String(agora.getDate()).padStart(2, '0') + "-" +
+                       String(agora.getHours()).padStart(2, '0') + "-" +
+                       String(agora.getMinutes()).padStart(2, '0') + "-" +
+                       String(agora.getSeconds()).padStart(2, '0');
+
+        const resultado = document.getElementById("resultado");
+        resultado.style.display = "block";
+        resultado.innerHTML = `
+          ✅ Pedido submetido com sucesso!<br>
+          O teu número de acompanhamento é: <strong>${numero}</strong><br>
+          Guarda este número para acompanhar o estado do pedido na nossa homepage.
+        `;
+
+        document.getElementById("formulario").reset();
+      });
+    </script>
   </section>
 
 </body>
