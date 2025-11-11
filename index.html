@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>TrataTudo · Atendimento Digital</title>
+  <title>TrataTudo · Serviços Digitais</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -22,48 +22,64 @@
       max-width: 180px;
       margin-bottom: 1rem;
     }
+    nav {
+      position: sticky;
+      top: 0;
+      background: #0078d4;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      list-style: none;
+      margin: 0;
+      padding: 0.5rem;
+    }
+    nav li {
+      margin: 0.5rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+    }
+    nav a:hover {
+      background: #005fa3;
+    }
     section {
       padding: 2rem;
       max-width: 1000px;
       margin: auto;
     }
-    .services {
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
       gap: 1.5rem;
+      margin-top: 2rem;
     }
     .card {
       background: white;
-      padding: 1.5rem;
+      padding: 1rem;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .card h3 {
-      margin-top: 0;
-      color: #0078d4;
-    }
-    .cta {
-      display: block;
-      width: fit-content;
-      margin: 2rem auto;
-      background: #0078d4;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .social-icons {
-      margin-top: 1rem;
       text-align: center;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      transition: transform 0.2s;
     }
-    .social-icons a {
-      margin: 0 10px;
-      display: inline-block;
+    .card:hover {
+      transform: scale(1.03);
     }
-    .social-icons img {
-      width: 32px;
-      height: 32px;
+    .card img {
+      width: 48px;
+      margin-bottom: 0.5rem;
+    }
+    .card a {
+      text-decoration: none;
+      color: #0078d4;
+      font-weight: 600;
     }
     footer {
       background: #002b5c;
@@ -72,36 +88,16 @@
       padding: 1rem;
       margin-top: 2rem;
     }
-    #lucia-button {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background-color: #0078d4;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      z-index: 999;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    #lucia-button img {
-      width: 30px;
-      height: 30px;
-    }
-    #lucia-chatbox {
-      position: fixed;
-      bottom: 90px;
-      right: 20px;
-      width: 320px;
-      height: 500px;
-      border: none;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.2);
-      display: none;
-      z-index: 998;
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -110,56 +106,48 @@
   <header>
     <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>TrataTudo</h1>
-    <p>Atendimento digital 24h por IA. Soluções reais pela nossa equipa.</p>
+    <p>Escolhe o serviço que precisas e trata tudo com apoio digital.</p>
   </header>
 
-  <section>
-    <h2>💼 Serviços que tratamos por ti</h2>
-    <div class="services">
-      <div class="card">
-        <h3>🛂 Residência & Imigração</h3>
-        <p>Pedidos junto da AIMA, reagrupamento familiar, CPLP e vistos consulares.</p>
-      </div>
-      <div class="card">
-        <h3>🇵🇹 Nacionalidade Portuguesa</h3>
-        <p>Processos por casamento, ascendência, tempo de residência ou CPLP.</p>
-      </div>
-      <div class="card">
-        <h3>📄 Documentos Oficiais</h3>
-        <p>Segurança Social, Finanças, IEFP, registos civis e certidões.</p>
-      </div>
-      <div class="card">
-        <h3>⚖️ Apoio Jurídico</h3>
-        <p>Consultas, respostas a notificações, sentenças e orientação legal.</p>
-      </div>
-      <div class="card">
-        <h3>🌍 Traduções Certificadas</h3>
-        <p>Documentos traduzidos com validade legal para processos administrativos.</p>
-      </div>
-      <div class="card">
-        <h3>🏛️ Registos & Notariado</h3>
-        <p>Casamento, nascimento, divórcio, reconhecimento de documentos.</p>
-      </div>
-    </div>
-
-    <a href="residencia-aima.html" class="cta">Iniciar Pedido de Residência</a>
-  </section>
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
+      <li><a href="nacionalidade-portuguesa.html">Nacionalidade</a></li>
+      <li><a href="documentos-oficiais.html">Documentos Oficiais</a></li>
+      <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
+      <li><a href="traducoes-certificadas.html">Traduções</a></li>
+      <li><a href="registos-notariado.html">Registos & Notariado</a></li>
+    </ul>
+  </nav>
 
   <section>
-    <h2>📞 Contacta-nos</h2>
-    <p style="text-align:center;">Email: <a href="mailto:geral@tratatudo.pt">geral@tratatudo.pt</a></p>
-    <p style="text-align:center;">WhatsApp: <a href="https://wa.me/351923364360" target="_blank">+351 923 364 360</a></p>
-
-    <div class="social-icons">
-      <a href="https://instagram.com/tratatudo.pt" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
-      </a>
-      <a href="https://facebook.com/tratatudo.pt" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook" />
-      </a>
-      <a href="https://wa.me/351923364360" target="_blank">
-        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      </a>
+    <h2>💼 Serviços Disponíveis</h2>
+    <div class="grid">
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/3062/3062634.png" alt="Reagrupamento" />
+        <a href="reagrupamento-familiar.html">Reagrupamento Familiar</a>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/197/197593.png" alt="Nacionalidade" />
+        <a href="nacionalidade-portuguesa.html">Nacionalidade Portuguesa</a>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2920/2920322.png" alt="Documentos" />
+        <a href="documentos-oficiais.html">Documentos Oficiais</a>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Jurídico" />
+        <a href="apoio-juridico.html">Apoio Jurídico</a>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/2991/2991108.png" alt="Traduções" />
+        <a href="traducoes-certificadas.html">Traduções Certificadas</a>
+      </div>
+      <div class="card">
+        <img src="https://cdn-icons-png.flaticon.com/512/942/942748.png" alt="Registos" />
+        <a href="registos-notariado.html">Registos & Notariado</a>
+      </div>
     </div>
   </section>
 
@@ -167,19 +155,8 @@
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
 
-  <!-- Assistente IA Lúcia como bolha de mensagem -->
-  <div id="lucia-button" onclick="toggleLuciaChat()">
-    <img src="https://cdn-icons-png.flaticon.com/512/2950/2950736.png" alt="Chat" />
-  </div>
-
-  <iframe id="lucia-chatbox" src="https://eu.jotform.com/agent/0199f9d7dba47272af117860b646f5aa492b" allowfullscreen></iframe>
-
-  <script>
-    function toggleLuciaChat() {
-      const chat = document.getElementById('lucia-chatbox');
-      chat.style.display = chat.style.display === 'none' ? 'block' : 'none';
-    }
-  </script>
+  <!-- Assistente IA Lúcia como bolha de chat flutuante -->
+  <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
 
 </body>
 </html>
