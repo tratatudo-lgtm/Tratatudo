@@ -4,6 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrataTudo · Atendimento Digital</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -57,9 +59,22 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
       }
       nav li { border: none; }
       nav a { padding: 0.75rem 1.5rem; }
+      .cliente-btn {
+        background: white;
+        color: #0078d4;
+        border-radius: 6px;
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cliente-btn:hover {
+        background: #e6f0ff;
+      }
     }
     section {
       padding: 2rem;
@@ -124,8 +139,14 @@
   <nav id="mainMenu">
     <ul>
       <li><a href="index.html">Início</a></li>
-      <li><a href="cliente-login.html">Área do Cliente</a></li>
+      <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
+      <li><a href="nacionalidade-portuguesa.html">Nacionalidade</a></li>
+      <li><a href="documentos-oficiais.html">Documentos Oficiais</a></li>
+      <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
+      <li><a href="traducoes-certificadas.html">Traduções</a></li>
+      <li><a href="registos-notariado.html">Registos & Notariado</a></li>
       <li><a href="admin/admin.html">Administração</a></li>
+      <li><a href="cliente-login.html" class="cliente-btn">Área do Cliente</a></li>
     </ul>
   </nav>
 
@@ -164,6 +185,12 @@
     function toggleMenu() {
       const menu = document.getElementById("mainMenu");
       menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registado com sucesso!'))
+        .catch(error => console.log('Erro ao registar o Service Worker:', error));
     }
   </script>
 
