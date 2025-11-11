@@ -1,0 +1,42 @@
+{
+  "pedidos": [
+    {
+      "id": 1023,
+      "servico": "Nacionalidade Portuguesa",
+      "cliente": "Júlio",
+      "email": "julio@email.com",
+      "data": "2025-11-02",
+      "estado": "Em análise"
+    },
+    {
+      "id": 1018,
+      "servico": "Tradução Certificada",
+      "cliente": "Maria Silva",
+      "email": "maria.silva@email.com",
+      "data": "2025-10-28",
+      "estado": "Finalizado"
+    },
+    {
+      "id": 1009,
+      "servico": "Reagrupamento Familiar",
+      "cliente": "Júlio",
+      "email": "julio@email.com",
+      "data": "2025-10-20",
+      "estado": "A aguardar documentos"
+    }
+  ],
+  "clientes": [
+    {
+      "nome": "Júlio",
+      "email": "julio@email.com",
+      "ultimoPedido": "2025-11-02",
+      "estado": "Ativo"
+    },
+    {
+      "nome": "Maria Silva",
+      "email": "maria.silva@email.com",
+      "ultimoPedido": "2025-10-28",
+      "estado": "Ativo"
+    }
+  ]
+}

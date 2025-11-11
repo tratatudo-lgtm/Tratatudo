@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registo de Administrador · TrataTudo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    .registo-box {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 420px;
+    }
+    h1 {
+      text-align: center;
+      color: #0078d4;
+    }
+    input, select {
+      width: 100%;
+      padding: 0.75rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background: #0078d4;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .link {
+      text-align: center;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="registo-box">
+    <h1>Registar Administrador</h1>
+    <form action="admin.html" method="post">
+      <input type="text" placeholder="Nome completo" required />
+      <input type="email" placeholder="Email institucional" required />
+      <input type="password" placeholder="Palavra-passe" required />
+      <select required>
+        <option value="">Nível de acesso</option>
+        <option value="geral">Administrador Geral</option>
+        <option value="moderador">Moderador</option>
+        <option value="suporte">Suporte Técnico</option>
+      </select>
+      <button type="submit">Criar Conta</button>
+    </form>
+    <div class="link">
+      <p>Já tens acesso? <a href="admin-login.html">Entrar</a></p>
+    </div>
+  </div>
+
+</body>
+</html>
