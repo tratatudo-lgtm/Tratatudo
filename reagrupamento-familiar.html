@@ -63,48 +63,44 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
       }
       nav li { border: none; }
       nav a { padding: 0.75rem 1.5rem; }
+      .cliente-btn {
+        background: white;
+        color: #0078d4;
+        border-radius: 6px;
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cliente-btn:hover {
+        background: #e6f0ff;
+      }
     }
     section {
       padding: 2rem;
-      max-width: 800px;
+      max-width: 1000px;
       margin: auto;
     }
     ul {
       padding-left: 1.5rem;
     }
-    .contact-option {
-      background: white;
-      padding: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-    }
-    .contact-option img {
-      width: 32px;
-    }
-    .contact-option a {
-      text-decoration: none;
-      color: #0078d4;
-      font-weight: 600;
-    }
-    .consultoria {
-      text-align: center;
-      margin-top: 2rem;
-    }
-    .consultoria a {
+    .botao {
       display: inline-block;
-      background: #0078d4;
-      color: white;
+      margin-top: 1rem;
       padding: 0.75rem 1.5rem;
-      border-radius: 6px;
+      background-color: #0078d4;
+      color: white;
       text-decoration: none;
       font-weight: 600;
+      border-radius: 4px;
+    }
+    .agente-ia {
+      margin-top: 3rem;
+      text-align: center;
     }
     footer {
       background: #002b5c;
@@ -113,6 +109,11 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -120,7 +121,7 @@
   <header>
     <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>Reagrupamento Familiar</h1>
-    <p>Unimos famílias com apoio legal e digital em todo o processo de reagrupamento.</p>
+    <p>Unimos famílias com apoio completo em processos de reagrupamento legal em Portugal.</p>
   </header>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
@@ -134,48 +135,38 @@
       <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
       <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="admin/admin.html">Administração</a></li>
+      <li><a href="cliente-login.html" class="cliente-btn">Área do Cliente</a></li>
     </ul>
   </nav>
 
   <section>
     <h2>👨‍👩‍👧‍👦 Quem pode pedir reagrupamento?</h2>
     <ul>
-      <li>Cônjuges e filhos menores de residentes legais</li>
-      <li>Ascendentes dependentes (pais ou avós)</li>
-      <li>Filhos maiores a estudar em Portugal</li>
-      <li>Unidos de facto com comprovação documental</li>
+      <li>Cônjuges e unidos de facto</li>
+      <li>Filhos menores ou dependentes</li>
+      <li>Ascendentes em linha reta (pais e avós)</li>
+      <li>Filhos adotados legalmente</li>
+      <li>Outros familiares com dependência comprovada</li>
     </ul>
 
-    <p>Tratamos do processo completo, desde a documentação até à submissão junto da AIMA.</p>
+    <p>Tratamos do processo completo, desde a documentação até à submissão oficial. Acompanhamos cada etapa com atenção e proximidade.</p>
+    <a href="contacto.html" class="botao">Falar com um agente</a>
 
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
-      <a href="https://wa.me/351923364360" target="_blank">WhatsApp</a>
-    </div>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Messenger" />
-      <a href="https://m.me/tratatudo.pt" target="_blank">Messenger</a>
-    </div>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
-      <a href="https://instagram.com/tratatudo.pt" target="_blank">Instagram</a>
-    </div>
-    <div class="contact-option">
-      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
-      <a href="mailto:geral@tratatudo.pt">geral@tratatudo.pt</a>
-    </div>
-
-    <div class="consultoria">
-      <a href="javascript:void(window.open('https://form.jotform.com/252906067884064','blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
-        Pedido de consultoria - TrataTudo.pt
-      </a>
+    <div class="agente-ia">
+      <h2>💬 Fala com o nosso Assistente Inteligente</h2>
+      <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
     </div>
   </section>
 
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+    <p>
+      <a href="sobre.html">Sobre Nós</a> ·
+      <a href="termos.html">Termos de Utilização</a> ·
+      <a href="privacidade.html">Política de Privacidade</a> ·
+      <a href="cookies.html">Cookies</a>
+    </p>
   </footer>
 
   <script>
@@ -192,5 +183,4 @@
   </script>
 
 </body>
-
 </html>
