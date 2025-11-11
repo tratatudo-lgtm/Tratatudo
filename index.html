@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TrataTudo · Atendimento Digital</title>
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
@@ -20,52 +18,23 @@
       padding: 2rem;
       text-align: center;
     }
-    header img {
-      max-width: 180px;
-      margin-bottom: 1rem;
-    }
-    .menu-toggle {
-      background: #0078d4;
-      color: white;
-      padding: 1rem;
-      font-size: 1.5rem;
-      border: none;
-      width: 100%;
-      text-align: left;
-      cursor: pointer;
-    }
     nav {
-      display: none;
       background: #0078d4;
-    }
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-    }
-    nav li {
-      border-top: 1px solid rgba(255,255,255,0.2);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      padding: 1rem;
     }
     nav a {
-      display: block;
       color: white;
       text-decoration: none;
-      padding: 1rem;
       font-weight: 600;
+      padding: 0.5rem 1rem;
     }
     nav a:hover {
       background: #005fa3;
-    }
-    @media (min-width: 768px) {
-      .menu-toggle { display: none; }
-      nav { display: block; }
-      nav ul {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-      }
-      nav li { border: none; }
-      nav a { padding: 0.75rem 1.5rem; }
+      border-radius: 4px;
     }
     section {
       padding: 2rem;
@@ -98,7 +67,6 @@
       margin-top: 2rem;
     }
     .consultoria a {
-      display: inline-block;
       background: #0078d4;
       color: white;
       padding: 0.75rem 1.5rem;
@@ -106,18 +74,9 @@
       text-decoration: none;
       font-weight: 600;
     }
-    .chat-link {
+    .agente-ia {
+      margin-top: 3rem;
       text-align: center;
-      margin-top: 2rem;
-    }
-    .chat-link a {
-      display: inline-block;
-      background: #005fa3;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: 600;
     }
     footer {
       background: #002b5c;
@@ -131,29 +90,18 @@
 <body>
 
   <header>
-    <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>TrataTudo</h1>
     <p>Atendimento digital · Soluções humanas · Tratamos de tudo por ti</p>
   </header>
 
-  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
-
-  <nav id="mainMenu">
-    <ul>
-      <li><a href="index.html" class="active">Início</a></li>
-      <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
-      <li><a href="nacionalidade-portuguesa.html">Nacionalidade</a></li>
-      <li><a href="documentos-oficiais.html">Documentos Oficiais</a></li>
-      <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
-      <li><a href="traducoes-certificadas.html">Traduções</a></li>
-      <li><a href="registos-notariado.html">Registos & Notariado</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="sobre.html">Sobre Nós</a></li>
-      <li><a href="termos.html">Termos</a></li>
-      <li><a href="privacidade.html">Privacidade</a></li>
-      <li><a href="chat.html">Assistente IA</a></li>
-    </ul>
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="cliente.html">Área do Cliente</a>
+    <a href="admin.html">Administração</a>
+    <a href="admin-dashboard.html">Dashboard</a>
+    <a href="admin-login.html">Login Admin</a>
+    <a href="admin-registo.html">Registo Admin</a>
+    <a href="historico.html">Histórico</a>
   </nav>
 
   <section>
@@ -172,32 +120,20 @@
     </div>
 
     <div class="consultoria">
-      <a href="javascript:void(window.open('https://form.jotform.com/252906067884064','blank','scrollbars=yes,toolbar=no,width=700,height=500'))">
-        Pedido de consultoria - TrataTudo.pt
+      <a href="https://form.jotform.com/252906067884064" target="_blank">
+        ➕ Pedido de consultoria
       </a>
     </div>
 
-    <div class="chat-link">
-      <a href="chat.html">💬 Falar com o Assistente Inteligente</a>
+    <div class="agente-ia">
+      <h2>💬 Fala com o nosso Assistente Inteligente</h2>
+      <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
     </div>
   </section>
 
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
   </footer>
-
-  <script>
-    function toggleMenu() {
-      const menu = document.getElementById("mainMenu");
-      menu.style.display = menu.style.display === "block" ? "none" : "block";
-    }
-
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(() => console.log('Service Worker registado com sucesso!'))
-        .catch(error => console.log('Erro ao registar o Service Worker:', error));
-    }
-  </script>
 
 </body>
 </html>
