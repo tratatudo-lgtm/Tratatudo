@@ -2,174 +2,86 @@
 <html lang="pt">
 <head>
   <meta charset="UTF-8" />
+  <title>Painel Administração · TrataTudo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Administração · TrataTudo</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background: #f4f4f4;
+      background: #f9f9f9;
       color: #333;
-    }
-    header {
-      background: #002b5c;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    nav {
-      background: #0078d4;
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 1000px;
-      margin: auto;
       padding: 2rem;
     }
-    .bloco {
-      background: white;
-      padding: 1.5rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    header {
+      text-align: center;
       margin-bottom: 2rem;
     }
-    .bloco h3 {
-      margin-top: 0;
+    h2 {
       color: #0078d4;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
+    .actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
     }
-    th, td {
-      padding: 0.75rem;
-      border-bottom: 1px solid #ddd;
-      text-align: left;
-    }
-    th {
-      background: #f0f0f0;
-    }
-    #botaoIA {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0078d4;
+    .actions button {
+      background: #d32f2f;
       color: white;
+      padding: 0.5rem 1rem;
       border: none;
-      border-radius: 50px;
-      padding: 0.75rem 1.25rem;
+      border-radius: 6px;
       font-weight: 600;
-      font-size: 14px;
       cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      z-index: 9999;
+    }
+    .panel {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+    .panel h3 {
+      margin-top: 0;
+      color: #444;
+    }
+    .placeholder {
+      text-align: center;
+      color: #777;
+      margin-top: 1rem;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Área de Administração · TrataTudo</h1>
-    <p>Gestão de pedidos, clientes e configurações</p>
+    <h2>Administração · TrataTudo</h2>
+    <p>Bem-vindo ao painel de gestão da plataforma.</p>
   </header>
 
-  <nav>
-    <a href="#pedidos">📁 Pedidos</a>
-    <a href="#clientes">👤 Clientes</a>
-    <a href="admin-dashboard.html">📊 Dashboard</a>
-    <a href="admin-login.html">🔐 Login</a>
-    <a href="admin-registo.html">➕ Registo</a>
-  </nav>
+  <div class="actions">
+    <button onclick="logoutAdmin()">Sair</button>
+  </div>
 
-  <section id="pedidos">
-    <div class="bloco">
-      <h3>📁 Pedidos Recebidos</h3>
-      <table id="tabelaPedidos">
-        <thead>
-          <tr>
-            <th>#</th>
-            <th>Serviço</th>
-            <th>Cliente</th>
-            <th>Data</th>
-            <th>Estado</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+  <div class="panel">
+    <h3>📋 Gestão de Clientes e Pedidos</h3>
+    <div class="placeholder">
+      <p>Funcionalidades em breve: ver clientes, editar pedidos, exportar dados...</p>
     </div>
-  </section>
-
-  <section id="clientes">
-    <div class="bloco">
-      <h3>👤 Lista de Clientes</h3>
-      <table id="tabelaClientes">
-        <thead>
-          <tr>
-            <th>Nome</th>
-            <th>Email</th>
-            <th>Último Pedido</th>
-            <th>Status</th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Botão flutuante para abrir o agente IA -->
-  <button id="botaoIA" onclick="abrirAgenteIA()">💬 Assistente IA</button>
+  </div>
 
   <script>
-    function abrirAgenteIA() {
-      window.open(
-        'https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js',
-        'chatIA',
-        'width=420,height=600,scrollbars=no,resizable=no'
-      );
+    // Proteção de acesso
+    if (localStorage.getItem("adminAutenticado") !== "true") {
+      window.location.href = "admin-login.html";
     }
 
-    fetch('dados.json')
-      .then(res => res.json())
-      .then(data => {
-        const pedidosBody = document.querySelector('#tabelaPedidos tbody');
-        data.pedidos.forEach(p => {
-          const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${p.id}</td>
-            <td>${p.servico}</td>
-            <td>${p.cliente}</td>
-            <td>${p.data}</td>
-            <td>${p.estado}</td>
-          `;
-          pedidosBody.appendChild(row);
-        });
-
-        const clientesBody = document.querySelector('#tabelaClientes tbody');
-        data.clientes.forEach(c => {
-          const row = document.createElement('tr');
-          row.innerHTML = `
-            <td>${c.nome}</td>
-            <td>${c.email}</td>
-            <td>${c.ultimoPedido}</td>
-            <td>${c.estado}</td>
-          `;
-          clientesBody.appendChild(row);
-        });
-      });
+    function logoutAdmin() {
+      localStorage.removeItem("adminAutenticado");
+      window.location.href = "admin-login.html";
+    }
   </script>
 
 </body>
