@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto · TrataTudo</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0078d4" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background: #002b5c;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    header img {
+      max-width: 180px;
+      margin-bottom: 1rem;
+    }
+    .menu-toggle {
+      background: #0078d4;
+      color: white;
+      padding: 1rem;
+      font-size: 1.5rem;
+      border: none;
+      width: 100%;
+      text-align: left;
+      cursor: pointer;
+    }
+    nav {
+      display: none;
+      background: #0078d4;
+    }
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    nav li {
+      border-top: 1px solid rgba(255,255,255,0.2);
+    }
+    nav a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      padding: 1rem;
+      font-weight: 600;
+    }
+    nav a:hover {
+      background: #005fa3;
+    }
+    @media (min-width: 768px) {
+      .menu-toggle { display: none; }
+      nav { display: block; }
+      nav ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      nav li { border: none; }
+      nav a { padding: 0.75rem 1.5rem; }
+    }
+    section {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    .contact-option {
+      background: white;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .contact-option img {
+      width: 32px;
+    }
+    .contact-option a {
+      text-decoration: none;
+      color: #0078d4;
+      font-weight: 600;
+    }
+    footer {
+      background: #002b5c;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
+    <h1>Contacto</h1>
+    <p>Como preferes entrar em contacto connosco?</p>
+  </header>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
+
+  <nav id="mainMenu">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="reagrupamento-familiar.html">Reagrupamento</a></li>
+      <li><a href="nacionalidade-portuguesa.html">Nacionalidade</a></li>
+      <li><a href="documentos-oficiais.html">Documentos Oficiais</a></li>
+      <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
+      <li><a href="traducoes-certificadas.html">Traduções</a></li>
+      <li><a href="registos-notariado.html">Registos & Notariado</a></li>
+      <li><a href="contacto.html" class="active">Contacto</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" />
+      <a href="https://wa.me/351923364360" target="_blank">Falar por WhatsApp · 923 364 360</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Messenger" />
+      <a href="https://m.me/tratatudo.pt" target="_blank">Enviar mensagem no Messenger</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram" />
+      <a href="https://instagram.com/tratatudo.pt" target="_blank">Contactar via Instagram</a>
+    </div>
+    <div class="contact-option">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" />
+      <a href="mailto:geral@tratatudo.pt">Enviar email para geral@tratatudo.pt</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById("mainMenu");
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    }
+
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('Service Worker registado com sucesso!'))
+        .catch(error => console.log('Erro ao registar o Service Worker:', error));
+    }
+  </script>
+
+  <!-- Aqui podes integrar o script da IA -->
+  <!-- <script src="IA-tratatudo.js"></script> -->
+
+</body>
+</html>
