@@ -63,19 +63,34 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
       }
       nav li { border: none; }
       nav a { padding: 0.75rem 1.5rem; }
+      .cliente-btn {
+        background: white;
+        color: #0078d4;
+        border-radius: 6px;
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cliente-btn:hover {
+        background: #e6f0ff;
+      }
     }
     section {
       padding: 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      line-height: 1.6;
     }
     h2 {
       color: #0078d4;
       margin-top: 2rem;
+    }
+    p {
+      line-height: 1.6;
     }
     footer {
       background: #002b5c;
@@ -84,6 +99,11 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -91,7 +111,7 @@
   <header>
     <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>Política de Privacidade</h1>
-    <p>Comprometemo-nos a proteger os teus dados e respeitar a tua privacidade.</p>
+    <p>Comprometemo-nos a proteger os teus dados pessoais com transparência e segurança.</p>
   </header>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
@@ -105,39 +125,42 @@
       <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
       <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="sobre.html">Sobre Nós</a></li>
-      <li><a href="termos.html">Termos</a></li>
-      <li><a href="privacidade.html" class="active">Privacidade</a></li>
+      <li><a href="admin/admin.html">Administração</a></li>
+      <li><a href="cliente-login.html" class="cliente-btn">Área do Cliente</a></li>
     </ul>
   </nav>
 
   <section>
-    <h2>1. Recolha de Dados</h2>
-    <p>Recolhemos dados pessoais como nome, email, contacto telefónico e documentos enviados, apenas quando o utilizador os fornece voluntariamente através da nossa plataforma ou canais de atendimento.</p>
+    <h2>1. Recolha de dados</h2>
+    <p>Recolhemos dados pessoais como nome, email, telefone e documentos apenas quando fornecidos voluntariamente pelo utilizador, através de formulários ou contacto direto.</p>
 
     <h2>2. Finalidade</h2>
-    <p>Os dados recolhidos são utilizados para prestar os serviços contratados, responder a pedidos de informação, melhorar a experiência do utilizador e cumprir obrigações legais.</p>
+    <p>Os dados são utilizados exclusivamente para prestação de serviços, comunicação com o cliente e cumprimento de obrigações legais.</p>
 
-    <h2>3. Segurança</h2>
-    <p>Implementamos medidas técnicas e organizativas para proteger os dados contra acesso não autorizado, perda ou destruição. Utilizamos encriptação, controlo de acessos e servidores seguros.</p>
+    <h2>3. Partilha de dados</h2>
+    <p>Não partilhamos dados com terceiros, exceto quando exigido por lei ou para cumprimento de serviços contratados com consentimento explícito.</p>
 
-    <h2>4. Partilha de Dados</h2>
-    <p>Não partilhamos os teus dados com terceiros, exceto quando necessário para a execução dos serviços (ex: entidades públicas) ou quando exigido por lei.</p>
+    <h2>4. Segurança</h2>
+    <p>Adotamos medidas técnicas e organizativas para proteger os dados contra acesso não autorizado, perda ou destruição.</p>
 
-    <h2>5. Cookies</h2>
-    <p>Utilizamos cookies para melhorar a navegação e recolher estatísticas de uso. Podes configurar o teu navegador para bloquear ou eliminar cookies, mas isso pode afetar a funcionalidade da plataforma.</p>
+    <h2>5. Direitos do utilizador</h2>
+    <p>O utilizador pode solicitar acesso, correção, portabilidade ou eliminação dos seus dados pessoais, conforme previsto no RGPD.</p>
 
-    <h2>6. Direitos do Utilizador</h2>
-    <p>O utilizador tem o direito de aceder, retificar, apagar ou limitar o tratamento dos seus dados. Pode também opor-se ao tratamento ou solicitar a portabilidade dos dados.</p>
+    <h2>6. Cookies</h2>
+    <p>Utilizamos cookies para melhorar a experiência de navegação. Mais detalhes na nossa <a href="cookies.html">Política de Cookies</a>.</p>
 
-    <h2>7. Contacto para Privacidade</h2>
-    <p>Para exercer os teus direitos ou esclarecer dúvidas sobre esta política, contacta-nos através de <a href="mailto:privacidade@tratatudo.pt">privacidade@tratatudo.pt</a>.</p>
+    <h2>7. Alterações</h2>
+    <p>Esta política pode ser atualizada. Recomendamos consulta regular para estar informado sobre eventuais alterações.</p>
   </section>
 
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+    <p>
+      <a href="sobre.html">Sobre Nós</a> ·
+      <a href="termos.html">Termos de Utilização</a> ·
+      <a href="privacidade.html">Política de Privacidade</a> ·
+      <a href="cookies.html">Cookies</a>
+    </p>
   </footer>
 
   <script>
