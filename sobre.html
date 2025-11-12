@@ -63,35 +63,38 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
       }
       nav li { border: none; }
       nav a { padding: 0.75rem 1.5rem; }
+      .cliente-btn {
+        background: white;
+        color: #0078d4;
+        border-radius: 6px;
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cliente-btn:hover {
+        background: #e6f0ff;
+      }
     }
     section {
       padding: 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      line-height: 1.6;
     }
     h2 {
       color: #0078d4;
       margin-top: 2rem;
     }
-    .valores {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 1.5rem;
-      margin-top: 1.5rem;
+    p {
+      line-height: 1.6;
     }
-    .valor {
-      background: white;
-      padding: 1rem;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.05);
-    }
-    .valor h3 {
-      margin-top: 0;
-      color: #005fa3;
+    .agente-ia {
+      margin-top: 3rem;
+      text-align: center;
     }
     footer {
       background: #002b5c;
@@ -100,6 +103,11 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -107,7 +115,7 @@
   <header>
     <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
     <h1>Sobre Nós</h1>
-    <p>Humanizamos o digital. Facilitamos a tua vida.</p>
+    <p>Somos uma equipa dedicada a simplificar a vida de quem precisa de apoio legal, documental e administrativo em Portugal.</p>
   </header>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
@@ -121,44 +129,43 @@
       <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
       <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="sobre.html" class="active">Sobre Nós</a></li>
+      <li><a href="admin/admin.html">Administração</a></li>
+      <li><a href="cliente-login.html" class="cliente-btn">Área do Cliente</a></li>
     </ul>
   </nav>
 
   <section>
-    <h2>Quem somos</h2>
-    <p>A TrataTudo nasceu com uma missão simples: tornar os processos burocráticos mais humanos, acessíveis e rápidos. Somos uma equipa multidisciplinar — juristas, tradutores, técnicos administrativos e especialistas em mobilidade internacional — unidos por um propósito: ajudar pessoas e famílias a resolverem tudo com confiança e clareza.</p>
+    <h2>🌟 Missão</h2>
+    <p>Facilitar o acesso a serviços legais e administrativos com eficiência, clareza e proximidade. Acreditamos que ninguém deve enfrentar burocracias sozinho.</p>
 
-    <p>Sabemos que lidar com documentos, legalizações e serviços públicos pode ser confuso e demorado. Por isso, criámos uma plataforma digital que aproxima o cidadão dos serviços que precisa, com atendimento personalizado e acompanhamento real.</p>
+    <h2>💙 Valores</h2>
+    <ul>
+      <li>Empatia e respeito por cada cliente</li>
+      <li>Transparência em todos os processos</li>
+      <li>Compromisso com a qualidade e os prazos</li>
+      <li>Inovação com responsabilidade</li>
+    </ul>
 
-    <h2>O que nos move</h2>
-    <div class="valores">
-      <div class="valor">
-        <h3>🤝 Proximidade</h3>
-        <p>Falamos contigo como se estivéssemos ao teu lado. Porque estamos — mesmo que à distância.</p>
-      </div>
-      <div class="valor">
-        <h3>⚖️ Rigor</h3>
-        <p>Trabalhamos com profissionais certificados e seguimos todos os requisitos legais em cada processo.</p>
-      </div>
-      <div class="valor">
-        <h3>🚀 Agilidade</h3>
-        <p>Respondemos rápido, tratamos com eficiência e poupamos-te tempo e dores de cabeça.</p>
-      </div>
-      <div class="valor">
-        <h3>💡 Inovação</h3>
-        <p>Usamos tecnologia para simplificar o que antes era complicado. E estamos sempre a melhorar.</p>
-      </div>
+    <h2>🚀 Visão</h2>
+    <p>Ser a plataforma de referência em Portugal para quem procura apoio digital com toque humano. Queremos que cada pessoa se sinta acompanhada, segura e confiante.</p>
+
+    <h2>👥 A nossa equipa</h2>
+    <p>Somos juristas, tradutores, técnicos administrativos e especialistas em imigração. Trabalhamos juntos para garantir que cada processo seja tratado com rigor e cuidado.</p>
+
+    <div class="agente-ia">
+      <h2>💬 Fala com o nosso Assistente Inteligente</h2>
+      <script src="https://cdn.jotfor.ms/agent/embedjs/0199f9d7dba47272af117860b646f5aa492b/embed.js"></script>
     </div>
-
-    <h2>Estamos aqui para ti</h2>
-    <p>Seja para pedir nacionalidade, reagrupar a tua família, traduzir documentos ou obter apoio jurídico — estamos contigo em cada passo. E se não souberes por onde começar, fala connosco. A nossa equipa está pronta para ouvir, orientar e... tratar de tudo.</p>
   </section>
 
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+    <p>
+      <a href="sobre.html">Sobre Nós</a> ·
+      <a href="termos.html">Termos de Utilização</a> ·
+      <a href="privacidade.html">Política de Privacidade</a> ·
+      <a href="cookies.html">Cookies</a>
+    </p>
   </footer>
 
   <script>
