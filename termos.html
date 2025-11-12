@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Termos & Condições · TrataTudo</title>
+  <title>Termos de Utilização · TrataTudo</title>
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#0078d4" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
@@ -63,19 +63,34 @@
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: center;
       }
       nav li { border: none; }
       nav a { padding: 0.75rem 1.5rem; }
+      .cliente-btn {
+        background: white;
+        color: #0078d4;
+        border-radius: 6px;
+        margin-left: 1rem;
+        padding: 0.5rem 1rem;
+        font-weight: 600;
+        text-decoration: none;
+      }
+      .cliente-btn:hover {
+        background: #e6f0ff;
+      }
     }
     section {
       padding: 2rem;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
-      line-height: 1.6;
     }
     h2 {
       color: #0078d4;
       margin-top: 2rem;
+    }
+    p {
+      line-height: 1.6;
     }
     footer {
       background: #002b5c;
@@ -84,14 +99,19 @@
       padding: 1rem;
       margin-top: 2rem;
     }
+    footer a {
+      color: white;
+      text-decoration: underline;
+      margin: 0 0.5rem;
+    }
   </style>
 </head>
 <body>
 
   <header>
     <img src="logo-tratatudo.jpeg" alt="Logotipo TrataTudo" />
-    <h1>Termos & Condições</h1>
-    <p>Consulta os termos legais que regem o uso da nossa plataforma.</p>
+    <h1>Termos de Utilização</h1>
+    <p>Conhece os termos que regem o uso da nossa plataforma e serviços digitais.</p>
   </header>
 
   <button class="menu-toggle" onclick="toggleMenu()">☰ Menu</button>
@@ -105,38 +125,39 @@
       <li><a href="apoio-juridico.html">Apoio Jurídico</a></li>
       <li><a href="traducoes-certificadas.html">Traduções</a></li>
       <li><a href="registos-notariado.html">Registos & Notariado</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="sobre.html">Sobre Nós</a></li>
-      <li><a href="termos.html" class="active">Termos</a></li>
+      <li><a href="admin/admin.html">Administração</a></li>
+      <li><a href="cliente-login.html" class="cliente-btn">Área do Cliente</a></li>
     </ul>
   </nav>
 
   <section>
     <h2>1. Aceitação dos Termos</h2>
-    <p>Ao aceder ou utilizar a plataforma TrataTudo, o utilizador concorda com os presentes Termos & Condições. Se não concordar, deverá cessar imediatamente a utilização dos nossos serviços.</p>
+    <p>Ao aceder ou utilizar o site TrataTudo.pt, o utilizador concorda com os presentes Termos de Utilização. Se não concordar, deverá cessar imediatamente a navegação e utilização dos serviços.</p>
 
     <h2>2. Serviços Prestados</h2>
-    <p>A TrataTudo oferece serviços digitais de apoio documental, jurídico, tradução certificada e consultoria. Os serviços estão sujeitos a disponibilidade, análise técnica e validação legal.</p>
+    <p>O site oferece apoio digital em processos legais, administrativos e documentais. Os serviços são prestados com base nas informações fornecidas pelo utilizador e estão sujeitos à legislação portuguesa.</p>
 
     <h2>3. Responsabilidade do Utilizador</h2>
-    <p>O utilizador compromete-se a fornecer informações verdadeiras e completas, e a não utilizar os serviços para fins ilegais ou fraudulentos.</p>
+    <p>O utilizador compromete-se a fornecer informações verdadeiras e completas, bem como a utilizar o site de forma ética e legal. O uso indevido pode resultar em suspensão ou cancelamento de acesso.</p>
 
     <h2>4. Privacidade e Proteção de Dados</h2>
-    <p>Respeitamos a privacidade dos nossos utilizadores. Os dados recolhidos são tratados de acordo com a legislação em vigor. Para mais detalhes, consulta a nossa <a href="privacidade.html">Política de Privacidade</a>.</p>
+    <p>Os dados pessoais recolhidos são tratados de acordo com a nossa <a href="privacidade.html">Política de Privacidade</a>. O utilizador tem o direito de aceder, corrigir ou eliminar os seus dados.</p>
 
     <h2>5. Propriedade Intelectual</h2>
-    <p>Todos os conteúdos, marcas, logótipos e materiais presentes na plataforma são propriedade da TrataTudo ou de terceiros autorizados, e estão protegidos por direitos de autor.</p>
+    <p>Todos os conteúdos do site, incluindo textos, imagens, logotipos e funcionalidades, são propriedade da TrataTudo ou licenciados para uso. É proibida a reprodução sem autorização prévia.</p>
 
     <h2>6. Alterações aos Termos</h2>
-    <p>Reservamo-nos o direito de alterar estes Termos & Condições a qualquer momento. As alterações serão comunicadas na plataforma e entram em vigor após publicação.</p>
-
-    <h2>7. Contacto Legal</h2>
-    <p>Para questões legais ou institucionais, podes contactar-nos através do email <a href="mailto:legal@tratatudo.pt">legal@tratatudo.pt</a>.</p>
+    <p>A TrataTudo reserva-se o direito de alterar os Termos de Utilização a qualquer momento. As alterações serão comunicadas no site e entram em vigor após publicação.</p>
   </section>
 
   <footer>
     <p>© 2025 TrataTudo · Atendimento Digital · Soluções Humanas</p>
+    <p>
+      <a href="sobre.html">Sobre Nós</a> ·
+      <a href="termos.html">Termos de Utilização</a> ·
+      <a href="privacidade.html">Política de Privacidade</a> ·
+      <a href="cookies.html">Cookies</a>
+    </p>
   </footer>
 
   <script>
